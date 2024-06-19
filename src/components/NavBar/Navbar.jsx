@@ -91,21 +91,15 @@ export default function NavBAr() {
         }
     };
 
-    const changeTheme = async (isDark) => {
-        const themeElement = await document.getElementById('app-theme');
+    const changeTheme =  (isDark) => {
+        const themeElement =  document.getElementById('app-theme');
         const themeBasePath = './node_modules/primereact/resources/themes';
-
-        if (themeElement) {
-            themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${themeLight}`;
-        } else {
-            console.error('No se encuentra el thema');
-        }
+        // themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
     };
 
     useEffect(() => {
         changeTheme(dark);
     },[])
-
 
     // Función que para abrir y cerrar modal del perfil
     const toggleModal = () => {
