@@ -3,7 +3,9 @@ import './Home.css'
 import { Divider } from 'primereact/divider';
 import { Button } from 'primereact/button';
 import logo from '../../assets/img_main.png'
+import { useNavigate } from 'react-router-dom';
 export default function Home() {
+    const navigate = useNavigate();
     return (
         <>
             <div className='box-home'>
@@ -13,7 +15,7 @@ export default function Home() {
                         <h1> TECNOLOGÍA PARA LA GESTIÓN URBANA</h1>
                         <h2>INNOVACIÓN-CREACIÓN-DISRUPCIÓN</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores aut ex eum itaque veniam.</p>
-                        <a href="" className='btn-contact'>Contáctanos</a>
+                        {/* <a href="" className='btn-contact'>Contáctanos</a> */}
                     </div>
                 </header>
                 {/* Contenido */}
