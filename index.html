@@ -22,12 +22,12 @@
     const themeLight = 'lara-light-blue/theme.css'; // Cambia esto al nombre real de tu archivo CSS para el tema claro
 
     const selectedTheme = savedDarkMode ? themeDark : themeLight;
-    console.log(savedDarkMode);
-    console.log(selectedTheme);
-    if(savedDarkMode){
+    if (savedDarkMode) {
+      console.log(savedDarkMode);
+      console.log(selectedTheme);
       document.getElementById('app-theme').href = `${themeBasePath}/${selectedTheme}`;
     }
-    
+
   </script>
 </head>
 
