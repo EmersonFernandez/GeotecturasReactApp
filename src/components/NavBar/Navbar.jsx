@@ -171,7 +171,7 @@ export default function NavBAr() {
                                 </div>
                                 <div className='dividir'></div>
                                 <div className='info-perfil _efect'>
-                                    <a><i className='pi pi-cog' style={{ marginRight: '10px' }}></i>Configurar Perfil</a>
+                                    <p><i className='pi pi-cog' style={{ marginRight: '10px' }}></i>Configurar Perfil</p>
                                 </div>
                                 <div className='info-perfil _efect _themes' onClick={toggleModalThemes}>
                                     <a><i className='pi pi-palette' style={{ marginRight: '10px' }}></i>Temas<i className='pi pi-angle-right _row' style={{ marginLeft: '90px' }}></i></a>
