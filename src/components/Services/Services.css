@@ -19,6 +19,7 @@
     font-size: var(--font-size-h1);
     font-weight: 400;
     margin: 0px;
+    padding: 0px 15px;
     text-transform: uppercase;
 }
 
