@@ -98,9 +98,9 @@ export default function NavBAr() {
         themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
     };
 
-    // useEffect(() => {
-    //     changeTheme(dark);
-    // },[])
+    useEffect(() => {
+        changeTheme(dark);
+    },[])
 
     // Función que para abrir y cerrar modal del perfil
     const toggleModal = () => {
