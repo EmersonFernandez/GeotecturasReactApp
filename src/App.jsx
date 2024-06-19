@@ -9,19 +9,27 @@ import './App.css'
 import Services from './components/Services/Services';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   let themeDark = 'lara-dark-blue/theme.css';
   let ThemeLight = 'lara-light-blue/theme.css';
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [dark, setDark] = useState(() => {
     const savedDarkMode = localStorage.getItem('darkMode');
     return savedDarkMode ? JSON.parse(savedDarkMode) : false;  // Default to false if not set
   });
 
   const changeTheme = (isDark) => {
-    const themeElement = document.getElementById('app-theme');
-    const themeBasePath = '/themes';
-    themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
+    const themeElementDark = document.getElementById('app-theme-dark');
+    const themeElementLight = document.getElementById('app-theme-light');
+
+    if (isDark) {
+      themeElementDark.removeAttribute('disabled');
+      themeElementLight.setAttribute('disabled', true);
+    } else {
+      themeElementDark.setAttribute('disabled', true);
+      themeElementLight.removeAttribute('disabled');
+    }
   };
 
   useEffect(() => {
