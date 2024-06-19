@@ -24,7 +24,7 @@ export default function Login({setIsLoggedIn}) {
                 <div className="container-login100">
                     <div className="login-container">
                         <form>
-                            <Card className="login-card">
+                            <Card className="login-card border-1 surface-border border-round">
                                 <div className="login-header">
                                     <img src={logo} alt="Logo" className="login-logo" />
                                     <div className='text-session'>
