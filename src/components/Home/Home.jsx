@@ -15,7 +15,7 @@ export default function Home() {
                         <h1> TECNOLOGÍA PARA LA GESTIÓN URBANA</h1>
                         <h2>INNOVACIÓN-CREACIÓN-DISRUPCIÓN</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores aut ex eum itaque veniam.</p>
-                        {/* <a href="" className='btn-contact'>Contáctanos</a> */}
+                        <a className='btn-contact'>Contáctanos</a>
                     </div>
                 </header>
                 {/* Contenido */}

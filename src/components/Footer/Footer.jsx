@@ -40,24 +40,24 @@ const Footer = () => {
                             <div className='col-12 md:col-4'>
                                 <div className='center-horizontal'>
                                     <p className='title-footer'>Servicios</p>
-                                    {/* <ul className='ul-footer text-center'>
-                                        <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Ecosistemas Digitales</a></li>
-                                        <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital Smart City</a></li>
-                                        <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital P.O.T.</a></li>
-                                        <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital P.D.M.</a></li>
-                                        <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital Macroproyectos</a></li>
-                                        <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital Inmobiliario</a></li>
-                                    </ul> */}
+                                    <ul className='ul-footer text-center'>
+                                        <li className='mb-1'><a className='mb-2 link-servicios'>Ecosistemas Digitales</a></li>
+                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital Smart City</a></li>
+                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital P.O.T.</a></li>
+                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital P.D.M.</a></li>
+                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital Macroproyectos</a></li>
+                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital Inmobiliario</a></li>
+                                    </ul>
                                 </div>
                             </div>
                             {/* Contactanos */}
                             <div className='col-12 md:col-4 '>
                                 <div className='center-horizontal'>
                                     <p className='title-footer'>Contáctanos</p>
-                                    {/* <ul className='ul-footer'>
+                                    <ul className='ul-footer'>
                                         <li className='mb-1'><a href={mailtoUrl} className='icon-dividir contactanos'><i className='pi pi-envelope'></i>gerencia@geotecturas.com</a></li>
                                         <li className='mb-1'><a href={whatsappUrl} target='_blank' className='icon-dividir contactanos'><i className='pi pi-phone'></i>+57 321 6279691</a></li>
-                                    </ul> */}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
