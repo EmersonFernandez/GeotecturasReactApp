@@ -102,9 +102,9 @@ export default function NavBAr() {
     };
 
     // Efecto para aplicar el tema al cargar la página
-    useEffect(() => {
-        changeTheme(dark); // Aplica el tema guardado al cargar la página
-    }, []);
+    // useEffect(() => {
+    //     changeTheme(dark); // Aplica el tema guardado al cargar la página
+    // }, []);
 
     // Función que para abrir y cerrar modal del perfil
     const toggleModal = () => {
