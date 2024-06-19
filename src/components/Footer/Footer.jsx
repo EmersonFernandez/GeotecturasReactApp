@@ -40,14 +40,14 @@ const Footer = () => {
                             <div className='col-12 md:col-4'>
                                 <div className='center-horizontal'>
                                     <p className='title-footer'>Servicios</p>
-                                    <ul className='ul-footer text-center'>
+                                    {/* <ul className='ul-footer text-center'>
                                         <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Ecosistemas Digitales</a></li>
                                         <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital Smart City</a></li>
                                         <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital P.O.T.</a></li>
                                         <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital P.D.M.</a></li>
                                         <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital Macroproyectos</a></li>
                                         <li className='mb-1'><a href="#" className='mb-2 link-servicios'>Gemelo Digital Inmobiliario</a></li>
-                                    </ul>
+                                    </ul> */}
                                 </div>
                             </div>
                             {/* Contactanos */}
@@ -70,13 +70,13 @@ const Footer = () => {
                     <div className='flex justify-content-center align-content-center'>
                         <div className='flex flex-column justify-content-center align-content-center'>
                             <div className='text-center mb-2'>Todos los derechos reservados © 2024 Geotecturas SAS</div>
-                            <div className='flex justify-content-center align-content-center'>
+                            {/* <div className='flex justify-content-center align-content-center'>
                                 <a href="#" className='icon-dividir'><i className='pi pi-facebook'></i></a>
                                 <a href="#" className='icon-dividir'><i className='pi pi-instagram'></i></a>
                                 <a href="#" className='icon-dividir'><i className='pi pi-twitter'></i></a>
                                 <a href="#" className='icon-dividir'><i className='pi pi-linkedin'></i></a>
                                 <a href="#" className='icon-dividir'><i className='pi pi-youtube'></i></a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

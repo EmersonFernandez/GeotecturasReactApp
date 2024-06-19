@@ -105,7 +105,7 @@ export default function Services() {
                 <div className='info'>
                     <h3 className="mb-1">{product.name}</h3>
                     <p className="mt-0 mb-3" style={{fontSize:'0.8rem'}}>{product.description}</p>
-                    <a className="btn-detalle" onClick={(e) => handleClick(e,product.url)}>Ver más</a>
+                    {/* <a className="btn-detalle" onClick={(e) => handleClick(e,product.url)}>Ver más</a> */}
                 </div>
             </div>
         );
