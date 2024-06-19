@@ -16,19 +16,16 @@
   <!-- <link id="app-theme" rel="stylesheet" type="text/css" href="./node_modules/primereact/resources/themes/lara-light-blue/theme.css"> -->
   <script>
     // Lee el tema guardado y aplica el archivo CSS correcto antes de que React se cargue
-    const savedDarkMode = JSON.parse(localStorage.getItem('darkMode'));
-    const themeBasePath = '/themes';
-    const themeDark = 'lara-dark-blue/theme.css'; // Cambia esto al nombre real de tu archivo CSS para el tema oscuro
-    const themeLight = 'lara-light-blue/theme.css'; // Cambia esto al nombre real de tu archivo CSS para el tema claro
+    (function() {
+        const savedDarkMode = JSON.parse(localStorage.getItem('darkMode'));
+        const themeBasePath = '/themes';
+        const themeDark = 'lara-dark-blue/theme.css'; // Cambia esto al nombre real de tu archivo CSS para el tema oscuro
+        const themeLight = 'lara-light-blue/theme.css'; // Cambia esto al nombre real de tu archivo CSS para el tema claro
 
-    const selectedTheme = savedDarkMode ? themeDark : themeLight;
-    document.getElementById('app-theme').href = `${themeBasePath}/${selectedTheme}`;
-    // if (savedDarkMode) {
-    //   console.log(savedDarkMode);
-    //   console.log(selectedTheme);
-    // }
-
-  </script>
+        const selectedTheme = savedDarkMode ? themeDark : themeLight;
+        document.write('<link id="app-theme" rel="stylesheet" href="' + themeBasePath + '/' + selectedTheme + '">');
+    })();
+</script>
 </head>
 
 
