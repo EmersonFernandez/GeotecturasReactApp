@@ -93,7 +93,7 @@ export default function NavBAr() {
 
     const changeTheme =  (isDark) => {
         const themeElement =  document.getElementById('app-theme');
-        themeElement.setAttribute('disabled', false);
+        themeElement.setAttribute('disabled', true);
         const themeBasePath = '/themes';
         themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
     };
