@@ -18,8 +18,8 @@
     // Lee el tema guardado y aplica el archivo CSS correcto antes de que React se cargue
     const savedDarkMode = JSON.parse(localStorage.getItem('darkMode'));
     const themeBasePath = '/themes';
-    const themeDark = 'dark-theme.css'; // Cambia esto al nombre real de tu archivo CSS para el tema oscuro
-    const themeLight = 'light-theme.css'; // Cambia esto al nombre real de tu archivo CSS para el tema claro
+    const themeDark = 'lara-dark-blue/theme.css'; // Cambia esto al nombre real de tu archivo CSS para el tema oscuro
+    const themeLight = 'lara-light-blue/theme.css'; // Cambia esto al nombre real de tu archivo CSS para el tema claro
 
     const selectedTheme = savedDarkMode ? themeDark : themeLight;
     document.getElementById('app-theme').href = `${themeBasePath}/${selectedTheme}`;
