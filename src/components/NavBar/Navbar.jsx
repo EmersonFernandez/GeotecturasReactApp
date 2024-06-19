@@ -91,10 +91,17 @@ export default function NavBAr() {
         }
     };
 
-    const changeTheme =  (isDark) => {
-        const themeElement =  document.getElementById('app-theme');
-        const themeBasePath = '/themes';
-        themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
+    const changeTheme = (isDark) => {
+        const themeElementDark = document.getElementById('app-theme-dark');
+        const themeElementLight = document.getElementById('app-theme-light');
+
+        if (isDark) {
+            themeElementDark.removeAttribute('disabled');
+            themeElementLight.setAttribute('disabled', true);
+        } else {
+            themeElementDark.setAttribute('disabled', true);
+            themeElementLight.removeAttribute('disabled');
+        }
     };
 
     // useEffect(() => {

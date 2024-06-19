@@ -11,10 +11,9 @@ import Services from './components/Services/Services';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  let themeDark = 'lara-dark-blue/theme.css';
-  let ThemeLight = 'lara-light-blue/theme.css';
-
   const [dark, setDark] = useState(() => {
+
+    
     const savedDarkMode = localStorage.getItem('darkMode');
     return savedDarkMode ? JSON.parse(savedDarkMode) : false;  // Default to false if not set
   });
