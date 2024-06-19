@@ -9,6 +9,9 @@ import './App.css'
 import Services from './components/Services/Services';
 
 function App() {
+
+  let themeDark = 'lara-dark-blue/theme.css';
+  let ThemeLight = 'lara-light-blue/theme.css';
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [dark, setDark] = useState(() => {
     const savedDarkMode = localStorage.getItem('darkMode');
@@ -25,7 +28,7 @@ function App() {
     changeTheme(dark);
   }, []);
 
-  
+
   return (
     <PrimeReactProvider>
       <BrowserRouter>
