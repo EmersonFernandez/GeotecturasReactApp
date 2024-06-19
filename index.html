@@ -24,7 +24,9 @@
     const selectedTheme = savedDarkMode ? themeDark : themeLight;
     console.log(savedDarkMode);
     console.log(selectedTheme);
-    document.getElementById('app-theme').href = `${themeBasePath}/${selectedTheme}`;
+    if(savedDarkMode){
+      document.getElementById('app-theme').href = `${themeBasePath}/${selectedTheme}`;
+    }
     
   </script>
 </head>
