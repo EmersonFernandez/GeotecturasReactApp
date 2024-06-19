@@ -94,7 +94,7 @@ export default function NavBAr() {
     const changeTheme = (isDark) => {
         const themeElement = document.getElementById('app-theme');
         const themeBasePath = './node_modules/primereact/resources/themes';
-        // themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
+        themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
     };
 
     useEffect(() => {
