@@ -91,10 +91,15 @@ export default function NavBAr() {
         }
     };
 
-    const changeTheme = (isDark) => {
-        const themeElement = document.getElementById('app-theme');
+    const changeTheme = async (isDark) => {
+        const themeElement = await document.getElementById('app-theme');
         const themeBasePath = './node_modules/primereact/resources/themes';
-        themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
+
+        if (themeElement) {
+            themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${themeLight}`;
+        } else {
+            console.error('No se encuentra el thema');
+        }
     };
 
     useEffect(() => {
