@@ -83,8 +83,8 @@ export default function NavBAr() {
         return savedDarkMode ? JSON.parse(savedDarkMode) : false;  // Default to false if not set
     });
 
+    // Función para cambiar el tema y guardar la preferencia en localStorage
     const toggleTheme = (isDark) => {
-
         if (dark !== isDark) {
             setDark(isDark);
             localStorage.setItem('darkMode', JSON.stringify(isDark));
@@ -92,16 +92,19 @@ export default function NavBAr() {
         }
     };
 
+    // Función para aplicar el tema seleccionado
     const changeTheme = (isDark) => {
         const themeElement = document.getElementById('app-theme');
         const themeBasePath = '/themes';
-        themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
+        const selectedTheme = isDark ? themeDark : ThemeLight; // Asumo que themeDark y ThemeLight son variables que contienen los nombres de los archivos de los temas
+
+        themeElement.href = `${themeBasePath}/${selectedTheme}`; // Asegúrate de que estás añadiendo ".css" al final si es necesario
     };
 
-    document.addEventListener('DOMContentLoaded', function () {
-        changeTheme(dark);
-    });
-
+    // Efecto para aplicar el tema al cargar la página
+    useEffect(() => {
+        changeTheme(dark); // Aplica el tema guardado al cargar la página
+    }, [dark]);
 
     // Función que para abrir y cerrar modal del perfil
     const toggleModal = () => {
