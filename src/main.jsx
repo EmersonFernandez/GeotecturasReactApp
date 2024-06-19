@@ -4,7 +4,7 @@ import App from './App.jsx'
 // import './index.css'
 
 // import 'primereact/resources/themes/md-dark-indigo/theme.css'; 
-import 'primereact/resources/themes/lara-light-blue/theme.css';
+// import 'primereact/resources/themes/lara-light-blue/theme.css';
 // import 'primereact/resources/themes/lara-dark-blue/theme.css';
 // import 'primereact/resources/primereact.min.css'; // CSS de PrimeReact
 import 'primeicons/primeicons.css'; // Iconos de PrimeReact
