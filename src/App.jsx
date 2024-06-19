@@ -11,30 +11,30 @@ import Services from './components/Services/Services';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const [dark, setDark] = useState(() => {
+  // const [dark, setDark] = useState(() => {
 
 
-    const savedDarkMode = localStorage.getItem('darkMode');
-    return savedDarkMode ? JSON.parse(savedDarkMode) : false;  // Default to false if not set
-  });
+  //   const savedDarkMode = localStorage.getItem('darkMode');
+  //   return savedDarkMode ? JSON.parse(savedDarkMode) : false;  // Default to false if not set
+  // });
 
-  const changeTheme = (isDark) => {
-    const themeElementDark = document.getElementById('app-theme-dark');
-    const themeElementLight = document.getElementById('app-theme-light');
-    const themeElementLightGeneral = document.getElementById('app-theme');
-    themeElementLightGeneral.setAttribute('disabled', true);
-    if (isDark) {
-      themeElementDark.removeAttribute('disabled');
-      themeElementLight.setAttribute('disabled', true);
-    } else {
-      themeElementDark.setAttribute('disabled', true);
-      themeElementLight.removeAttribute('disabled');
-    }
-  };
+  // const changeTheme = (isDark) => {
+  //   const themeElementDark = document.getElementById('app-theme-dark');
+  //   const themeElementLight = document.getElementById('app-theme-light');
+  //   const themeElementLightGeneral = document.getElementById('app-theme');
+  //   themeElementLightGeneral.setAttribute('disabled', true);
+  //   if (isDark) {
+  //     themeElementDark.removeAttribute('disabled');
+  //     themeElementLight.setAttribute('disabled', true);
+  //   } else {
+  //     themeElementDark.setAttribute('disabled', true);
+  //     themeElementLight.removeAttribute('disabled');
+  //   }
+  // };
 
-  useEffect(() => {
-    changeTheme(dark);
-  }, []);
+  // useEffect(() => {
+  //   changeTheme(dark);
+  // }, []);
 
 
   return (
