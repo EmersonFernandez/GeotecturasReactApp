@@ -84,6 +84,10 @@ export default function NavBAr() {
     });
 
     const toggleTheme = (isDark) => {
+        const themeElementDark = document.getElementById('app-theme-dark');
+        const themeElementLight = document.getElementById('app-theme-light');
+        themeElementDark.setAttribute('disabled', true);
+        themeElementLight.setAttribute('disabled', true);
         if (dark !== isDark) {
             setDark(isDark);
             localStorage.setItem('darkMode', JSON.stringify(isDark));
@@ -93,7 +97,7 @@ export default function NavBAr() {
 
     const changeTheme =  (isDark) => {
         const themeElement =  document.getElementById('app-theme');
-        themeElement.setAttribute('disabled', true);
+        themeElement.setAttribute('disabled', false);
         const themeBasePath = '/themes';
         themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
     };
