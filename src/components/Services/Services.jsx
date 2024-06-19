@@ -114,13 +114,13 @@ export default function Services() {
     return (
         <>
             <div className='box-home'>
-                <div className='title-servicies'>
+                {/* <div className='title-servicies'>
                     <p className='h1'>NUESTROS SERVICIOS</p>
                     <p className='h2 text-center me-2 ms-2'>Ecosistemas virtuales para la Transformación Digital</p>
                 </div>
                 <div className="card mb-1 mt-1">
                     <Carousel value={products} numScroll={1} numVisible={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
-                </div>
+                </div> */}
             </div>
         </>
     )
