@@ -92,15 +92,16 @@ export default function NavBAr() {
         }
     };
 
-    const changeTheme =  (isDark) => {
-        const themeElement =  document.getElementById('app-theme');
+    const changeTheme = (isDark) => {
+        const themeElement = document.getElementById('app-theme');
         const themeBasePath = '/themes';
         themeElement.href = isDark ? `${themeBasePath}/${themeDark}` : `${themeBasePath}/${ThemeLight}`;
     };
 
-    useEffect(() => {
+    document.addEventListener('DOMContentLoaded', function () {
         changeTheme(dark);
-    },[])
+    });
+
 
     // Función que para abrir y cerrar modal del perfil
     const toggleModal = () => {
