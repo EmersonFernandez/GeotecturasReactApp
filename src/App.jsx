@@ -13,7 +13,7 @@ function App() {
 
   const [dark, setDark] = useState(() => {
 
-    
+
     const savedDarkMode = localStorage.getItem('darkMode');
     return savedDarkMode ? JSON.parse(savedDarkMode) : false;  // Default to false if not set
   });
@@ -21,7 +21,8 @@ function App() {
   const changeTheme = (isDark) => {
     const themeElementDark = document.getElementById('app-theme-dark');
     const themeElementLight = document.getElementById('app-theme-light');
-
+    const themeElementLightGeneral = document.getElementById('app-theme');
+    themeElementLightGeneral.setAttribute('disabled', true);
     if (isDark) {
       themeElementDark.removeAttribute('disabled');
       themeElementLight.setAttribute('disabled', true);
