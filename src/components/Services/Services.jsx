@@ -115,7 +115,7 @@ export default function Services() {
         <>
             <div className='title-servicies'>
                 <p className='h1'>NUESTROS SERVICIOS</p>
-                <p className='h2'>Ecosistemas virtuales para la Transformación Digital</p>
+                <p className='h2 text-center'>Ecosistemas virtuales para la Transformación Digital</p>
             </div>
             <div className="card mb-1 mt-1">
                 <Carousel value={products} numScroll={1} numVisible={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
