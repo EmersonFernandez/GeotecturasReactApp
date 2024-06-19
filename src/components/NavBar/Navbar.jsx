@@ -174,13 +174,14 @@ export default function NavBAr() {
                                     <p><i className='pi pi-cog' style={{ marginRight: '10px' }}></i>Configurar Perfil</p>
                                 </div>
                                 <div className='info-perfil _efect _themes' onClick={toggleModalThemes}>
-                                    <a><i className='pi pi-palette' style={{ marginRight: '10px' }}></i>Temas<i className='pi pi-angle-right _row' style={{ marginLeft: '90px' }}></i></a>
+                                    <p><i className='pi pi-palette' style={{ marginRight: '10px' }}></i>Temas<i className='pi pi-angle-right _row' style={{ marginLeft: '90px' }}></i></p>
                                     {isOpenThemes && (
                                         <div className='themes'>
                                             <p onClick={() => toggleTheme(false)}>
                                                 <span>Claro</span>
                                                 {!dark && (<i className='pi pi-check' style={{ marginLeft: '10px', fontSize: '10px' }}></i>)}
                                             </p>
+                                            <div className='dividir'></div>
                                             <p onClick={() => toggleTheme(true)}>
                                                 <span>Oscuro</span>
                                                 {dark && (<i className='pi pi-check' style={{ marginLeft: '10px', fontSize: '10px' }}></i>)}
@@ -192,7 +193,7 @@ export default function NavBAr() {
                                 </div>
                                 <div className='dividir'></div>
                                 <div className='info-perfil _efect' onClick={() => navigate('/')}>
-                                    <a><i className='pi pi-sign-out' style={{ marginRight: '10px' }}></i>Cerrar Sesión</a>
+                                    <p><i className='pi pi-sign-out' style={{ marginRight: '10px' }}></i>Cerrar Sesión</p>
                                 </div>
                             </div>
                         </div>
