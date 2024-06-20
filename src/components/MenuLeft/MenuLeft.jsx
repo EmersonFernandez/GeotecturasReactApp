@@ -49,9 +49,9 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                             </svg> */}
                                 <span className="font-semibold text-2xl text-primary">Geotecturas</span>
                             </span>
-                            {/*  */}
+                            {/* Boton de cerrado */}
                             {
-                                !sidebar && <span>
+                                sidebar && <span>
                                     <Button type="button" ref={closeIconRef} onClick={(e) => hide(e)} icon="pi pi-times" rounded outlined className="h-2rem w-2rem"></Button>
                                 </span>
                             }
@@ -194,13 +194,13 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                     </ul>
                                 </li>
                             </ul>
-                        </div>
-                        <div className="mt-auto">
-                            <hr className="mb-3 mx-3 border-top-1 border-none surface-border" />
-                            <a v-ripple className="m-3 flex align-items-center cursor-pointer p-3 gap-2 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
-                                <Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" shape="circle" />
-                                <span className="font-bold">Amy Elsner</span>
-                            </a>
+                            <div className="mt-auto">
+                                <hr className="mb-3 mx-3 border-top-1 border-none surface-border" />
+                                <a v-ripple className="m-3 flex align-items-center cursor-pointer p-3 gap-2 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                    <Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" shape="circle" />
+                                    <span className="font-bold">Amy Elsner</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
