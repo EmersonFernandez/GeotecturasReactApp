@@ -61,7 +61,7 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                 <li>
                                     <StyleClass nodeRef={btnRef1} selector="@next" enterClassName="hidden" enterActiveClassName="slidedown" leaveToClassName="hidden" leaveActiveClassName="slideup">
                                         <div ref={btnRef1} className="p-ripple p-3 flex align-items-center justify-content-between text-600 cursor-pointer">
-                                            <span className="font-medium md:text-xs">FAVORITES</span>
+                                            <span className="md:font-medium text-xs">FAVORITES</span>
                                             <i className="pi pi-chevron-down"></i>
                                             <Ripple />
                                         </div>
@@ -70,14 +70,14 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                         <li>
                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                 <i className="pi pi-home mr-2"></i>
-                                                <span className="font-medium md:text-xs">Dashboard</span>
+                                                <span className="md:font-medium text-xs">Dashboard</span>
                                                 <Ripple />
                                             </a>
                                         </li>
                                         <li>
                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                 <i className="pi pi-bookmark mr-2"></i>
-                                                <span className="font-medium md:text-xs">Bookmarks</span>
+                                                <span className="md:font-medium text-xs">Bookmarks</span>
                                                 <Ripple />
                                             </a>
                                         </li>
@@ -85,7 +85,7 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                             <StyleClass nodeRef={btnRef2} selector="@next" enterClassName="hidden" enterActiveClassName="slidedown" leaveToClassName="hidden" leaveActiveClassName="slideup">
                                                 <a ref={btnRef2} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                     <i className="pi pi-chart-line mr-2"></i>
-                                                    <span className="font-medium md:text-xs">Reports</span>
+                                                    <span className="md:font-medium text-xs">Reports</span>
                                                     <i className="pi pi-chevron-down ml-auto mr-1"></i>
                                                     <Ripple />
                                                 </a>
@@ -95,7 +95,7 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                                     <StyleClass nodeRef={btnRef3} selector="@next" enterClassName="hidden" enterActiveClassName="slidedown" leaveToClassName="hidden" leaveActiveClassName="slideup">
                                                         <a ref={btnRef3} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                             <i className="pi pi-chart-line mr-2"></i>
-                                                            <span className="font-medium md:text-xs">Revenue</span>
+                                                            <span className="md:font-medium text-xs">Revenue</span>
                                                             <i className="pi pi-chevron-down ml-auto mr-1"></i>
                                                             <Ripple />
                                                         </a>
@@ -104,14 +104,14 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                                         <li>
                                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                                 <i className="pi pi-table mr-2"></i>
-                                                                <span className="font-medium md:text-xs">View</span>
+                                                                <span className="md:font-medium text-xs">View</span>
                                                                 <Ripple />
                                                             </a>
                                                         </li>
                                                         <li>
                                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                                 <i className="pi pi-search mr-2"></i>
-                                                                <span className="font-medium md:text-xs">Search</span>
+                                                                <span className="md:font-medium text-xs">Search</span>
                                                                 <Ripple />
                                                             </a>
                                                         </li>
@@ -120,7 +120,7 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                                 <li>
                                                     <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                         <i className="pi pi-chart-line mr-2"></i>
-                                                        <span className="font-medium md:text-xs">Expenses</span>
+                                                        <span className="md:font-medium text-xs">Expenses</span>
                                                         <Ripple />
                                                     </a>
                                                 </li>
@@ -129,14 +129,14 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                         <li>
                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                 <i className="pi pi-users mr-2"></i>
-                                                <span className="font-medium md:text-xs">Team</span>
+                                                <span className="md:font-medium text-xs">Team</span>
                                                 <Ripple />
                                             </a>
                                         </li>
                                         <li>
                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                 <i className="pi pi-comments mr-2"></i>
-                                                <span className="font-medium md:text-xs">Messages</span>
+                                                <span className="md:font-medium text-xs">Messages</span>
                                                 <span className="inline-flex align-items-center justify-content-center ml-auto bg-blue-500 text-0 border-circle" style={{ minWidth: '1.5rem', height: '1.5rem' }}>
                                                     3
                                                 </span>
@@ -146,14 +146,14 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                         <li>
                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                 <i className="pi pi-calendar mr-2"></i>
-                                                <span className="font-medium md:text-xs">Calendar</span>
+                                                <span className="md:font-medium text-xs">Calendar</span>
                                                 <Ripple />
                                             </a>
                                         </li>
                                         <li>
                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                 <i className="pi pi-cog mr-2"></i>
-                                                <span className="font-medium md:text-xs">Settings</span>
+                                                <span className="md:font-medium text-xs">Settings</span>
                                                 <Ripple />
                                             </a>
                                         </li>
@@ -164,7 +164,7 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                 <li>
                                     <StyleClass nodeRef={btnRef4} selector="@next" enterClassName="hidden" enterActiveClassName="slidedown" leaveToClassName="hidden" leaveActiveClassName="slideup">
                                         <div ref={btnRef4} className="p-ripple p-3 flex align-items-center justify-content-between text-600 cursor-pointer">
-                                            <span className="font-medium md:text-xs">APPLICATION</span>
+                                            <span className="md:font-medium text-xs">APPLICATION</span>
                                             <i className="pi pi-chevron-down"></i>
                                             <Ripple />
                                         </div>
@@ -173,21 +173,21 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                         <li>
                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                 <i className="pi pi-folder mr-2"></i>
-                                                <span className="font-medium md:text-xs">Projects</span>
+                                                <span className="md:font-medium text-xs">Projects</span>
                                                 <Ripple />
                                             </a>
                                         </li>
                                         <li>
                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                 <i className="pi pi-chart-bar mr-2"></i>
-                                                <span className="font-medium md:text-xs">Performance</span>
+                                                <span className="md:font-medium text-xs">Performance</span>
                                                 <Ripple />
                                             </a>
                                         </li>
                                         <li>
                                             <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                                 <i className="pi pi-cog mr-2"></i>
-                                                <span className="font-medium md:text-xs">Settings</span>
+                                                <span className="md:font-medium text-xs">Settings</span>
                                                 <Ripple />
                                             </a>
                                         </li>
