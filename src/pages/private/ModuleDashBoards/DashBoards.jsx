@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Toolbar } from 'primereact/toolbar';
 import { Avatar } from 'primereact/avatar';
 import { Panel } from 'primereact/panel';
@@ -38,6 +38,9 @@ export default function DashBoards() {
         screenWidth < 780 ? setSidebar(true) : setSidebar(false);
     });
 
+    useEffect(() => {
+        window.innerHeight < 780 ? setSidebar(true) : setSidebar(false);
+    },[]);
 
 
     return (
