@@ -9,7 +9,7 @@ import { StyleClass } from 'primereact/styleclass';
 import logo from '../../assets/img_main.png'
 
 export default function MenuLeft({ visible, setVisible, sidebar }) {
-    
+
     // Variables
     const btnRef1 = useRef(null);
     const btnRef2 = useRef(null);
@@ -50,9 +50,11 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                                 <span className="font-semibold text-2xl text-primary">Geotecturas</span>
                             </span>
                             {/*  */}
-                            <span>
-                                <Button type="button" ref={closeIconRef} onClick={(e) => hide(e)} icon="pi pi-times" rounded outlined className="h-2rem w-2rem"></Button>
-                            </span>
+                            {
+                                !sidebar && <span>
+                                    <Button type="button" ref={closeIconRef} onClick={(e) => hide(e)} icon="pi pi-times" rounded outlined className="h-2rem w-2rem"></Button>
+                                </span>
+                            }
                         </div>
                         <div className="overflow-y-auto">
                             <ul className="list-none p-3 m-0">
@@ -220,7 +222,7 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
             ></Sidebar>}
             {/* LLamos el componente div */}
             {
-                !sidebar && <div className="some-container" style={{width:'280px'}}>
+                !sidebar && <div className="some-container" style={{ width: '280px' }}>
                     <SidebarContent closeIconRef={null} hide={() => { }} />
                 </div>
             }

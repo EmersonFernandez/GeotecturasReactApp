@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
 import { Avatar } from 'primereact/avatar';
+
 import { useLocation, useNavigate } from 'react-router-dom';
 import { rutas } from '../../utils/rutas'
 import logo from '../../assets/img_main.png'
