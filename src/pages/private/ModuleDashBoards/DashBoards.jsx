@@ -36,10 +36,12 @@ export default function DashBoards() {
     window.addEventListener('resize', function () {
         let screenWidth = window.innerWidth; // Obtener el ancho actual de la pantalla
         screenWidth < 780 ? setSidebar(true) : setSidebar(false);
+        console.log(screenWidth);
     });
 
     useEffect(() => {
-        window.innerHeight < 780 ? setSidebar(true) : setSidebar(true);
+        window.innerWidth < 780 ? setSidebar(true) : setSidebar(false);
+        console.log('ventana',window.innerWidth );
     },[]);
 
 
