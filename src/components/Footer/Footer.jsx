@@ -21,7 +21,7 @@ const Footer = () => {
 
     const rutaExist = rutas.some(el => el.path === location.pathname);
     return (
-        location.pathname != '/' && rutaExist && (
+        location.pathname != '/login' && rutaExist && (
             <footer className="footer">
                 <div className='box'>
                     {/* Apartados */}

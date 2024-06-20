@@ -1,8 +1,7 @@
 
 import './Home.css'
 import { Divider } from 'primereact/divider';
-import { Button } from 'primereact/button';
-import logo from '../../assets/img_main.png'
+import logo from '../../../assets/img_main.png'
 import { useNavigate } from 'react-router-dom';
 export default function Home() {
     const navigate = useNavigate();

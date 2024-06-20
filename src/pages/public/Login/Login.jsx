@@ -4,9 +4,8 @@ import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
 import { FloatLabel } from "primereact/floatlabel";
 import { useNavigate } from 'react-router-dom';
-import { Ripple } from 'primereact/ripple';
 import './Login.css'
-import logo from '../../assets/img_main.png'
+import logo from '../../../assets/img_main.png'
 
 export default function Login({setIsLoggedIn}) {
 
@@ -19,7 +18,7 @@ export default function Login({setIsLoggedIn}) {
 
 
     return (
-        <div className="home-container --surface-50">
+        <div className="home-container">
             <div className="box">
                 <div className="container-login100">
                     <div className="login-container">

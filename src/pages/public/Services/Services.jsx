@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'primereact/carousel';
-import logo1 from '../../assets/img-servicies/bi.jpg'
-import logo2 from '../../assets/img-servicies/bogota.png'
-import logo3 from '../../assets/img-servicies/pot_1.jpg'
-import logo4 from '../../assets/img-servicies/pot.jpg'
-import logo5 from '../../assets/img-servicies/ciudadela.jpg'
-import logo6 from '../../assets/img-servicies/inmobiliario.png'
+import logo1 from '../../../assets/img-servicies/bi.jpg'
+import logo2 from '../../../assets/img-servicies/bogota.png'
+import logo3 from '../../../assets/img-servicies/pot_1.jpg'
+import logo4 from '../../../assets/img-servicies/pot.jpg'
+import logo5 from '../../../assets/img-servicies/ciudadela.jpg'
+import logo6 from '../../../assets/img-servicies/inmobiliario.png'
 import './Services.css'
 
 
@@ -58,37 +58,37 @@ export default function Services() {
                 name: 'Ecosistemas Digitales',
                 description: 'Transformación Digital con metodologías de BI-AI-BIGDATA.',
                 image: logo1,
-                url: '/home'
+                url: '/'
             },
             {
                 name: 'Gemelo Digital Smart City',
                 description: 'Transformación Digital con modelos CIM a escala de ciudad.',
                 image: logo2,
-                url: '/home'
+                url: '/'
             },
             {
                 name: 'Gemelo Digital P.O.T.',
                 description: 'Modelo CIM con el Plan de Ordenamiento Territorial a escala de ciudad.',
                 image: logo3,
-                url: '/home'
+                url: '/'
             },
             {
                 name: 'Gemelo Digital P.D.M',
                 description: 'Modelo CIM con el Plan de Desarrollo Municipal a escala de ciudad.',
                 image: logo4,
-                url: '/home'
+                url: '/'
             },
             {
                 name: 'Gemelo Digital Macroproyectos',
                 description: 'Modelo CIM de instrumentos de segundo y tercer nivel territorial',
                 image: logo5,
-                url: '/home'
+                url: '/'
             },
             {
                 name: 'Gemelo Digital Inmobiliario',
                 description: 'Modelo CIM Proptech para el Sector Inmobiliario y la Gestión del Suelo.',
                 image: logo6,
-                url: '/home'
+                url: '/'
             },
         ]);
     }, []);

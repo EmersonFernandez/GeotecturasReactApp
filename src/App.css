@@ -72,4 +72,5 @@ html, body {
 a{
   text-decoration: none;
   color: var(--surface-900);
+  cursor: pointer;
 }

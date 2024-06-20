@@ -1,0 +1,10 @@
+.container {
+    transition: transform 1s ease;
+    transform: translateX(-100%);
+    display: none;
+}
+
+.container.visible {
+    display: flex;
+    transform: translateX(0%);
+}

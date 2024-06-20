@@ -58,6 +58,7 @@
 .ul-footer li a{
     text-decoration: none;
     color: var(--color-footer);
+    cursor: pointer;
 }
 
 /* Links */

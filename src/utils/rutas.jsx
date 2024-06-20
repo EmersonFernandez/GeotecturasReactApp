@@ -1,12 +1,16 @@
 export const rutas = [
     {
         name:'inicio',
-        path:'/home'
+        path:'/'
     },
     {
         name:'servicios',
         path:'/services'
-    }
+    },
+    {
+        name:'Proyectos',
+        path:'/project'
+    },
 ]
 
 
