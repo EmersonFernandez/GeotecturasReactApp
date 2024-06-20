@@ -1,15 +1,4 @@
 /* Estilos del footer */
-
-:root{
-    --background-footer: #111827;
-    --color-footer:#ffffffa1;
-    --color-title:whitesmoke;
-    --background-linea-divisor:#ffffff50;
-    --color-hover:white;
-    --box-shadow:1px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-
 .footer {
     position: relative;
     display: flex;

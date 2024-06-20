@@ -5,9 +5,12 @@ import { Button } from 'primereact/button';
 import { Avatar } from 'primereact/avatar';
 import { Ripple } from 'primereact/ripple';
 import { StyleClass } from 'primereact/styleclass';
+
 import logo from '../../assets/img_main.png'
 
 export default function MenuLeft({ visible, setVisible, sidebar }) {
+    
+    // Variables
     const btnRef1 = useRef(null);
     const btnRef2 = useRef(null);
     const btnRef3 = useRef(null);
@@ -205,6 +208,7 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
 
     return (
         <div className="card flex justify-content-center" >
+            {/* LLamaod el sidebar */}
             {sidebar && <Sidebar
                 id='menu-menu'
                 visible={visible}
@@ -214,9 +218,9 @@ export default function MenuLeft({ visible, setVisible, sidebar }) {
                     <SidebarContent closeIconRef={closeIconRef} hide={hide} />
                 )}
             ></Sidebar>}
-
+            {/* LLamos el componente div */}
             {
-                !sidebar && <div className="some-container" style={{width:'300px'}}>
+                !sidebar && <div className="some-container" style={{width:'280px'}}>
                     <SidebarContent closeIconRef={null} hide={() => { }} />
                 </div>
             }

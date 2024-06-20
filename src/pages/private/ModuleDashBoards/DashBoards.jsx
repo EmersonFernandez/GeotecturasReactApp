@@ -39,7 +39,7 @@ export default function DashBoards() {
     });
 
     useEffect(() => {
-        window.innerHeight < 780 ? setSidebar(true) : setSidebar(false);
+        window.innerHeight < 780 ? setSidebar(true) : setSidebar(true);
     },[]);
 
 

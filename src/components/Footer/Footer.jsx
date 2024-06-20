@@ -1,8 +1,9 @@
 import React from 'react';
-import './Footer.css'; // Estilo CSS personalizado para el footer si es necesario
-import logo from '../../assets/img_main.png'
-import {rutas} from '../../utils/rutas'
 import { useLocation } from 'react-router-dom';
+
+import {rutas} from '../../utils/rutas'
+import logo from '../../assets/img_main.png'
+import './Footer.css'; 
 
 
 const Footer = () => {
@@ -20,10 +21,11 @@ const Footer = () => {
     let location = useLocation();
 
     const rutaExist = rutas.some(el => el.path === location.pathname);
+
     return (
         location.pathname != '/login' && rutaExist && (
             <footer className="footer">
-                <div className='box'>
+                <div className='box'>  
                     {/* Apartados */}
                     <div className='container'>
                         <div className='grid'>
@@ -62,8 +64,6 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-
-
 
                     {/* Divisor */}
                     <div className='dividir-f'></div>
