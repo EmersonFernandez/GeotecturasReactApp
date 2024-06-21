@@ -13,7 +13,7 @@ export default function Login({setIsLoggedIn}) {
     // Login
     const handleOnClickLogin = async () => {
         // console.log('Login');
-        navigate('/home');
+        navigate('/dashboard');
     }
 
 
