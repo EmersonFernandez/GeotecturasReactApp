@@ -29,17 +29,17 @@ a {
   cursor: pointer;
 }
 
-.container {
+.container-menu-toolbar {
   transition: transform 1s ease;
   transform: translateX(-100%);
   display: none;
 }
 
-.container.visible {
+.container-menu-toolbar.visible {
   display: flex;
   transform: translateX(0%);
 }
 
-i{
+.dashboard i{
   color: var(--surface-900);
 }

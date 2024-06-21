@@ -46,11 +46,11 @@ export default function MenuToolbar({Child}) {
 
 
     return (
-        <div className="flex gap-2">
-            <div className={`container bg-surface-400 surface-200 ${visible ? 'visible' : ''}`} id='menu-right'>
+        <div className="flex gap-2 dashboard">
+            <div className={`container-menu-toolbar bg-surface-400 surface-200 ${visible ? 'visible' : ''}`} id='menu-right'>
                 <MenuLeft visible={visible} setVisible={setVisible} sidebar={sidebar} />
             </div>
-            <div className='mt-3 me-2 ms-2 mb-3' style={{width:'100%' }}>
+            <div style={{width:'100%' }}>
                 <Toolbar start={start} end={end} style={{ border: 'none'}} />
                 {Child}
             </div>
