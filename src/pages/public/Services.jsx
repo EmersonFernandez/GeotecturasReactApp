@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'primereact/carousel';
-import logo1 from '../../../assets/img-servicies/bi.jpg'
-import logo2 from '../../../assets/img-servicies/bogota.png'
-import logo3 from '../../../assets/img-servicies/pot_1.jpg'
-import logo4 from '../../../assets/img-servicies/pot.jpg'
-import logo5 from '../../../assets/img-servicies/ciudadela.jpg'
-import logo6 from '../../../assets/img-servicies/inmobiliario.png'
-import './Services.css'
-
+import logo1 from '../../assets/img-servicies/bi.jpg'
+import logo2 from '../../assets/img-servicies/bogota.png'
+import logo3 from '../../assets/img-servicies/pot_1.jpg'
+import logo4 from '../../assets/img-servicies/pot.jpg'
+import logo5 from '../../assets/img-servicies/ciudadela.jpg'
+import logo6 from '../../assets/img-servicies/inmobiliario.png'
 
 export default function Services() {
     const [products, setProducts] = useState([]);

@@ -5,7 +5,7 @@ import Home from './pages/public/Home';
 import Login from './pages/public/Login';
 import Footer from './components/Footer';
 import NavBAr from './components/Navbar';
-import Services from './pages/public/Services/Services';
+import Services from './pages/public/Services';
 import './App.css'
 import './styles/stylemain.css'
 import Project from './pages/public/projects/Project';

@@ -7,6 +7,7 @@ import { Sidebar } from 'primereact/sidebar';
 import MenuLeft from './MenuLeft';
 import ModalProfil from './ModalProfil';
 import { fetchData } from '../utils/function'
+import { backgroundLetterProfil } from '../utils/function'
 // import './DashBoards.css'; // Importa el archivo de estilos CSS personalizado
 
 export default function MenuToolbar({ Child }) {
@@ -14,6 +15,8 @@ export default function MenuToolbar({ Child }) {
     const [isOpen, setIsOpen] = useState(null); // Para el modal del perfil
     const [visible, setVisible] = useState(false);
     const [sidebar, setSidebar] = useState(false);
+    const [letter, setLetter] = useState('');
+    const [color, setColor] = useState();
 
     const [dataUserConn, setDataUserConn] = useState([]); // Almacenar dato del usuario conectado
     useEffect(() => {
@@ -21,6 +24,7 @@ export default function MenuToolbar({ Child }) {
             try {
                 const user = await fetchData(`${API_URL}/userconnected`);
                 setDataUserConn(user);
+                setLetter(user.results[0].vcorreo);
             } catch (error) {
                 console.log('Error altraer el dato del usuario conectado', error);
             }
@@ -41,6 +45,12 @@ export default function MenuToolbar({ Child }) {
     };
 
 
+    useEffect(() => {
+        backgroundLetterProfil(letter.charAt(0).toUpperCase()).then(color => {
+            setColor(color);
+        });
+    }, [letter])
+
     const start = (
         <React.Fragment>
             <i className='pi pi-bars p-2 m-0 cursor-pointer' id='icon-menu-hamburger'
@@ -53,7 +63,7 @@ export default function MenuToolbar({ Child }) {
                 <i className='pi pi-bell ml-3'></i>
                 <i className='pi pi-comment ml-3'></i>
                 <i className='pi pi-cog ml-3'></i>
-                <Avatar label='E' style={{ backgroundColor: '#2196F3', color: '#ffffff' }} className='' onClick={toggleModal}></Avatar>
+                <Avatar label={letter.charAt(0).toUpperCase()} style={{ backgroundColor: `${color}`, color: '#ffffff' }} className='' onClick={toggleModal}></Avatar>
                 {isOpen && (
                     <ModalProfil
                         toggleModal={toggleModal}
@@ -66,7 +76,6 @@ export default function MenuToolbar({ Child }) {
                         user={dataUserConn.results[0]}
                     />
                 )}
-                {console.log(dataUserConn)}
             </div>
         </React.Fragment>
     )
@@ -75,7 +84,6 @@ export default function MenuToolbar({ Child }) {
     window.addEventListener('resize', function () {
         let screenWidth = window.innerWidth; // Obtener el ancho actual de la pantalla
         screenWidth < 780 ? setSidebar(true) : setSidebar(false);
-        console.log(screenWidth);
     });
 
     useEffect(() => {
@@ -92,6 +100,7 @@ export default function MenuToolbar({ Child }) {
                 <Toolbar start={start} end={end} style={{ padding: '1rem' }} />
                 {Child}
             </div>
+            {console.log(color)}
         </div>
     );
 }

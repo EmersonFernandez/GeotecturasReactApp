@@ -1,7 +1,5 @@
-
 import axios from 'axios';
-
-
+import {backgroundColorPerfil} from '../utils/datas'
 
 // Mensajes de Toas
 export const showMessage = (sumarry, message, ref, severity) => {
@@ -25,4 +23,10 @@ export async function fetchData(url) {
 // Colocar la primera letra en mayuscula
 export function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Letra color perfil
+export async function backgroundLetterProfil(letter) {
+    const key = backgroundColorPerfil[await letter];
+    return key.color;
 }

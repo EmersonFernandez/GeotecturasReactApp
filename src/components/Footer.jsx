@@ -18,6 +18,8 @@ const Footer = () => {
     const body = 'Hola, estoy interesado en tus servicios.';
     const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+    
+
     let location = useLocation();
 
     const rutaExist = rutas.some(el => el.path === location.pathname);
@@ -71,11 +73,11 @@ const Footer = () => {
                         <div className='flex flex-column justify-content-center align-content-center'>
                             <div className='text-center mb-2'>Todos los derechos reservados © 2024 Geotecturas SAS</div>
                             <div className='flex justify-content-center align-content-center'>
-                                <a className='icon-dividir'><i className='pi pi-facebook'></i></a>
-                                <a className='icon-dividir'><i className='pi pi-instagram'></i></a>
-                                <a className='icon-dividir'><i className='pi pi-twitter'></i></a>
-                                <a className='icon-dividir'><i className='pi pi-linkedin'></i></a>
-                                <a className='icon-dividir'><i className='pi pi-youtube'></i></a>
+                                <a href='https://www.facebook.com/Geotecturas/' className='icon-dividir' target="_blank" ><i className='pi pi-facebook'></i></a>
+                                <a href='https://www.instagram.com/geotecturas/' className='icon-dividir' target="_blank" ><i className='pi pi-instagram'></i></a>
+                                <a href='https://x.com/geotecturas' className='icon-dividir' target="_blank" ><i className='pi pi-twitter'></i></a>
+                                <a href='https://www.linkedin.com/in/geotecturas/' className='icon-dividir' target="_blank" ><i className='pi pi-linkedin'></i></a>
+                                <a href='https://www.youtube.com/channel/UCZVMtvoLKIHOviY61cmgCKQ' className='icon-dividir' target="_blank" ><i className='pi pi-youtube'></i></a>
                             </div>
                         </div>
                     </div>
