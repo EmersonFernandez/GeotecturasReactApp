@@ -100,7 +100,6 @@ export default function MenuToolbar({ Child }) {
                 <Toolbar start={start} end={end} style={{ padding: '1rem' }} />
                 {Child}
             </div>
-            {console.log(color)}
         </div>
     );
 }

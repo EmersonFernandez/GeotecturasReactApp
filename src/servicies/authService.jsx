@@ -3,7 +3,6 @@ import axios from 'axios';
 const API_URL = import.meta.env.VITE_URL_API;
 
 export const login = async (username, password) => {
-    console.log(API_URL);
     const response = await axios.post(`${API_URL}/login`, { username, password });
     if (response.data.token) {
         localStorage.setItem('token', response.data.token);
@@ -16,7 +15,6 @@ export const logout = () => {
 };
 
 export const isAuthenticated = async () => {
-    console.log('entro');
     const token = localStorage.getItem('token');
 
     if (!token) {
