@@ -1,0 +1,406 @@
+/* HOME*/
+.box-home {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Header */
+
+.box-home header {
+    color: var(--color-title);
+    background: var(--background-footer);
+    box-shadow: var(--box-shadow);
+}
+
+.box-home header h1 {
+    margin: 0;
+}
+
+.box-home .box-text-header {
+    padding: 40px 5px 40px 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-home .btn-contact {
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-title);
+    border: 2px solid var(--background-linea-divisor);
+    padding: 10px 7px;
+    border-radius: 5px;
+    font-weight: bolder;
+    transition: .5s ease;
+}
+
+.box-home .box-text-header p {
+    color: var(--color-footer);
+}
+
+.box-home .btn-contact:hover {
+    background: var(--color-title);
+    color: black;
+}
+
+/* About */
+.box-home .img-about {
+    width: 250px;
+    height: auto;
+}
+
+.box-home .box-about {
+    width: 800px !important;
+}
+
+.box-home .about-section div .title-home {
+    color: var(--color-title-home);
+    font-weight: bold;
+}
+
+.box-home .__reverser {
+    flex-direction: row-reverse;
+}
+
+/* Media query para dispositivos con un ancho máximo de 670px */
+@media screen and (max-width: 670px) {
+
+    .box-home .img-about {
+        width: 190px;
+    }
+
+    .box-home .box-about {
+        width: 300px !important;
+    }
+
+
+    .box-home .about-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .box-home .about-section div {
+        text-align: center;
+    }
+
+}
+
+
+/* LOGIN */
+
+
+.box-login {
+    width: 100%;
+    height: 100vh;
+    /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ebeeef;   */
+    /* Color de fondo */
+}
+
+.box-login .box {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box-login .container-login100 {
+    width: 100%;
+    height: 100%;
+    /* Ocupa toda la altura del contenedor padre */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* padding: 15px; */
+}
+
+.box-login .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.box-login .login-card {
+    width: 25rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* background-color: #ffffff; */
+}
+
+.box-login .login-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 5px;
+    /* background: #ebeeef5d; */
+    /* background: #ebeeef81; */
+    border-radius: 5px;
+}
+
+.box-login .login-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */
+    /* background: rgba(0, 0, 0, 0.1); */
+}
+
+.box-login .text-session {
+    margin: 0px;
+    padding: 0px;
+    font-style: italic;
+}
+
+.box-login .text-session .h1 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+
+.box-login .text-session .p {
+    font-size: 1rem;
+    margin-top: 0px;
+    font-weight: 500;
+}
+
+.box-login .p-button {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: var(--font-family) !important;
+}
+
+.box-login .p-field label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* font-family: cursive !important; */
+}
+
+
+
+
+/* FOOTER PAGUINA PUBLIC */
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-footer);
+    color: var(--color-footer);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Centrado */
+.footer .center-horizontal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titulos de los footer */
+.footer .title-footer {
+    text-align: start !important;
+    font-size: 1.2rem;
+    color: var(--color-title);
+}
+
+/* Parrafos del footer */
+.footer .p-footer {
+    text-align: center;
+}
+
+
+/* Linea devisora */
+.footer .dividir-f {
+    align-items: center;
+    height: 1px !important;
+    background: var(--background-linea-divisor);
+    margin: 10px 0px;
+}
+
+/* Lista */
+.footer .ul-footer {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* ul de los footer */
+.footer .ul-footer li a {
+    text-decoration: none;
+    color: var(--color-footer);
+    cursor: pointer;
+}
+
+/* Links */
+.footer .icon-dividir {
+    margin: 10px 4px;
+    color: var(--color-footer);
+    transition: .3s ease-in-out;
+}
+
+.footer .link-servicios:hover {
+    color: var(--color-hover);
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.footer .icon-dividir:hover {
+    color: var(--color-hover);
+}
+
+/* Inconos */
+.footer .icon-dividir i {
+    font-size: 1.5rem;
+}
+
+.footer .contactanos i {
+    font-size: 1rem;
+    margin: 0px 10px;
+}
+
+
+/* MODAL PERFIL */
+.modal-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* Posiciona el modal a la derecha */
+    align-items: flex-start;
+    /* Posiciona el modal en la parte superior */
+    z-index: 1000;
+}
+
+.modal-overlay .modal-box {
+    user-select: none;
+    background: var(--surface-0);
+    border-radius: 5px;
+    width: 210px;
+    margin: 60px 30px 0 0;
+    /* Espacio desde la parte superior y el lado derecho */
+    position: relative;
+    border: 1px solid var(--surface-200);
+
+    box-shadow: 0 4px 8px rgb(26 26 26 / .1);
+}
+
+.modal-overlay .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Linea divisoria */
+.modal-overlay .dividir {
+    width: 100%;
+    height: 1px;
+    background: var(--surface-200);
+    margin: 0;
+}
+
+.modal-overlay .info-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 12px;
+    width: 100%;
+}
+
+.modal-overlay .info-perfil .name {
+    font-weight: 500;
+}
+
+.modal-overlay .info-perfil .email {
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.modal-overlay ._efect:hover {
+    background: var(--surface-100);
+}
+
+.modal-overlay .info-perfil a {
+    cursor: pointer;
+}
+
+.modal-overlay .modal-content p {
+    margin: 0;
+}
+
+.modal-overlay ._themes {
+    position: relative;
+}
+
+.modal-overlay .themes {
+    position: absolute;
+    width: 88px;
+    left: -95px;
+    top: 20px;
+    background: var(--surface-0);
+    border-radius: 5px;
+    border: 1px solid var(--surface-200);
+    box-shadow: 0 4px 8px rgb(26 26 26 / .1);
+}
+
+.modal-overlay .themes p {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-overlay .themes p:hover {
+    background: var(--surface-100);
+}
+
+
+/* ESTILOS DEL SPINNER  */
+.p-progress-spinner-circle {
+    stroke: #3498db;
+    stroke-width: 4;
+
+    animation: p-progress-spinner-dashs 1.5s ease-in-out infinite, p-progress-spinner-colors 6s ease-in-out infinite;
+
+}
+
+@keyframes p-progress-spinner-dashs {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
+
+}
+
+
+/* ESTILOS DASHBOARDS */
+#icon-menu-hamburger:hover{
+    border-radius: 5px;
+    background: var(--color-btn-base);
+}

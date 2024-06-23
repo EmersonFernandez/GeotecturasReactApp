@@ -6,7 +6,7 @@ import { Avatar } from 'primereact/avatar';
 import { Ripple } from 'primereact/ripple';
 import { StyleClass } from 'primereact/styleclass';
 
-import logo from '../../assets/img_main.png'
+import logo from '../assets/img_main.png'
 
 export default function MenuLeft({ visible, setVisible, sidebar }) {
 

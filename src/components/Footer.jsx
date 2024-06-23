@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-import {rutas} from '../../utils/rutas'
-import logo from '../../assets/img_main.png'
-import './Footer.css'; 
+import {rutas} from '../utils/rutas'
+import logo from '../assets/img_main.png'
+
 
 
 const Footer = () => {
@@ -27,7 +27,7 @@ const Footer = () => {
             <footer className="footer">
                 <div className='box'>  
                     {/* Apartados */}
-                    <div className='container'>
+                    <div>
                         <div className='grid'>
                             {/* Nombre Pagina */}
                             <div className='col-12 md:col-4'>

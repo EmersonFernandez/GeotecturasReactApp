@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-import './DashBoards.css'; // Importa el archivo de estilos CSS personalizado
-import MenuToolbar from '../../../components/MenuToolbar/MenuToolbar';
+
+import MenuToolbar from '../../components/MenuToolbar';
 
 export default function DashBoards() {
-    
     const Component = () => {
         return (
             <>
-                <div className='bg-primary'>
+                <div className='box-dashboard'>
                     hola
                 </div>
             </>
