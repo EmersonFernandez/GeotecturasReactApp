@@ -39,6 +39,7 @@ export default function Login({ setIsLoggedIn }) {
     return (
         <div className="box-login">
             <Toast ref={toast} position="bottom-right" />
+            <div className='fixed top-0 left-0 my-5 mx-5' onClick={() => navigate('/')}><i className='pi pi-arrow-left hover:text-primary'></i></div>
             <div className="box">
                 <div className="container-login100">
                     <div className="login-container">
