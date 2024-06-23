@@ -1,52 +1,61 @@
 import React from 'react';
 import './style.css'
+import { Avatar } from 'primereact/avatar';
+
+const Profile = () => {
+    return (
+        <div className="profile">
+            <div className="profile-image">
+            <Avatar image="https://primefaces.org/cdn/primereact/images/avatar/xuxuefeng.png" className="mr-2" style={{width:'100%', height:'100%'}} shape="circle" />
+            </div>
+            <h1>Aurlin Cuesta</h1>
+            <p>Desarrollador web apasionado por crear soluciones innovadoras y atractivas. Especializado en React, Node.js y diseño UI/UX.</p>
+        </div>
+    );
+};
+
+const ProjectCard = ({ title, description }) => {
+    return (
+        <div className="project-card">
+            <div className="project-image">
+                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR9zvyQbFxTcvettJa9MRneoSBNpAoZboI4g&s' alt=""></img>
+            </div>
+            <h2>{title}</h2>
+            <p>{description}</p>
+        </div>
+    );
+};
+
+const ProjectsGrid = () => {
+    const projects = [
+        { title: 'Proyecto 1', description: 'Una aplicación web interactiva que permite a los usuarios explorar y descubrir nuevos productos.' },
+        { title: 'Proyecto 2', description: 'Un sitio web de comercio electrónico con un diseño moderno y funcionalidades avanzadas.' },
+        { title: 'Proyecto 3', description: 'Una aplicación móvil de seguimiento de actividad física con funciones de análisis de datos.' },
+        { title: 'Proyecto 4', description: 'Un sistema de gestión de contenido personalizado para una empresa de marketing digital.' },
+        { title: 'Proyecto 5', description: 'Una plataforma de colaboración en línea para equipos de diseño y desarrollo.' },
+        { title: 'Proyecto 6', description: 'Un sitio web de noticias con un diseño limpio y una experiencia de usuario intuitiva.' }
+    ];
+
+    return (
+        <div className="projects-grid">
+            {projects.map((project, index) => (
+                <ProjectCard 
+                    key={index}
+                    title={project.title}
+                    description={project.description}
+                />
+            ))}
+        </div>
+    );
+};
 
 
 export default function Project() {
 
     return (
-        <>  
-            <div className='flex flex-column justify-content-center align-items-center'>
-                <h2 className='text-sm md:text-2xl'>Portafolio</h2>
-                <h3 className='text-base md:text-3xl'>Mis Proyectos</h3>
-            </div>
-            <div className='card-container'>
-                <div className="card-project p-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
-                    <div className="card__content">
-                        <p className="card__title">Card Title</p>
-                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                    </div>
-                </div>
-                <div className="card-project p-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
-                    <div className="card__content">
-                        <p className="card__title">Card Title</p>
-                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                    </div>
-                </div>
-                <div className="card-project p-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
-                    <div className="card__content">
-                        <p className="card__title">Card Title</p>
-                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                    </div>
-                </div>
-                <div className="card-project p-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
-                    <div className="card__content">
-                        <p className="card__title">Card Title</p>
-                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                    </div>
-                </div>
-                <div className="card-project p-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
-                    <div className="card__content">
-                        <p className="card__title">Card Title</p>
-                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                    </div>
-                </div>
-            </div>
-        </>
+        <div className="app">
+            <Profile />
+            <ProjectsGrid />
+        </div>
     );
 }

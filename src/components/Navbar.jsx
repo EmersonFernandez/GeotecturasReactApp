@@ -95,7 +95,7 @@ export default function NavBAr() {
     };
 
     // Contenido Html
-    const start = <img alt="logo" src={logo} height="40" className="mr-2" ></img>; // Para mostrar el icon al comienzo del NavBar
+    const start = <img alt="logo" src={logo} height="40" className="mr-2"  onClick={() => navigate('/')}></img>; // Para mostrar el icon al comienzo del NavBar
     const end = (  // Para Mostrar la barra de busqueda y el Icon del perfil al final del NavBar 
         <div className="flex align-items-center gap-2">
             <InputText

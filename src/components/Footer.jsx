@@ -72,7 +72,7 @@ const Footer = () => {
                     <div className='flex justify-content-center align-content-center'>
                         <div className='flex flex-column justify-content-center align-content-center'>
                             <div className='text-center mb-2'>Todos los derechos reservados © 2024 Geotecturas SAS</div>
-                            <div className='flex justify-content-center align-content-center'>
+                            <div className='flex justify-content-center align-content-center gap-2'>
                                 <a href='https://www.facebook.com/Geotecturas/' className='icon-dividir' target="_blank" ><i className='pi pi-facebook'></i></a>
                                 <a href='https://www.instagram.com/geotecturas/' className='icon-dividir' target="_blank" ><i className='pi pi-instagram'></i></a>
                                 <a href='https://x.com/geotecturas' className='icon-dividir' target="_blank" ><i className='pi pi-twitter'></i></a>
