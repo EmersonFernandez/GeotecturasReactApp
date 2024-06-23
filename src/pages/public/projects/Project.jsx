@@ -1,42 +1,52 @@
-import React, {useState} from 'react'
-import { InputText } from 'primereact/inputtext';
-import { Checkbox } from 'primereact/checkbox';
-import { Button } from 'primereact/button';
-import logo from '../../../assets/img_main.png';
+import React from 'react';
+import './style.css'
+
 
 export default function Project() {
-    const [checked,setChecked] = useState();
+
     return (
-        <>
-            <div className="flex align-items-center justify-content-center">
-                <div className="surface-card p-4 shadow-2 border-round w-full lg:w-6">
-                    <div className="text-center mb-5">
-                        <img src={logo} alt="hyper" height={50} className="mb-3" />
-                        <div className="text-900 text-3xl font-medium mb-3">Welcome Back</div>
-                        <span className="text-600 font-medium line-height-3">Do not have an account?</span>
-                        <a className="font-medium no-underline ml-2 text-blue-500 cursor-pointer">Create today!</a>
+        <>  
+            <div className='flex flex-column justify-content-center align-items-center'>
+                <h2 className='text-sm md:text-2xl'>Portafolio</h2>
+                <h3 className='text-base md:text-3xl'>Mis Proyectos</h3>
+            </div>
+            <div className='card-container'>
+                <div className="card-project p-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                    <div className="card__content">
+                        <p className="card__title">Card Title</p>
+                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     </div>
-
-                    <div>
-                        <label htmlFor="email" className="block text-900 font-medium mb-2">Email</label>
-                        <InputText id="email" type="text" placeholder="Email address" className="w-full mb-3" />
-
-                        <label htmlFor="password" className="block text-900 font-medium mb-2">Password</label>
-                        <InputText id="password" type="password" placeholder="Password" className="w-full mb-3" />
-
-                        <div className="flex align-items-center justify-content-between mb-6">
-                            <div className="flex align-items-center">
-                                <Checkbox id="rememberme" onChange={e => setChecked(e.checked)} checked={checked} className="mr-2" />
-                                <label htmlFor="rememberme" className="text-900">Remember me</label>
-                            </div>
-                            <a className="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Forgot your password?</a>
-                        </div>
-
-                        <Button label="Sign In" icon="pi pi-user" className="w-full" />
+                </div>
+                <div className="card-project p-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                    <div className="card__content">
+                        <p className="card__title">Card Title</p>
+                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </div>
+                <div className="card-project p-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                    <div className="card__content">
+                        <p className="card__title">Card Title</p>
+                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </div>
+                <div className="card-project p-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                    <div className="card__content">
+                        <p className="card__title">Card Title</p>
+                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </div>
+                <div className="card-project p-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                    <div className="card__content">
+                        <p className="card__title">Card Title</p>
+                        <p className="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     </div>
                 </div>
             </div>
-
         </>
-    )
+    );
 }
