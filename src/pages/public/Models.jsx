@@ -17,7 +17,7 @@ export default function Models() {
                     <ModelsLoader />
                     </Suspense>
                     <ambientLight/>
-                    <OrbitControls autoRotate/>
+                    <OrbitControls />
                     <Stars count={1000} factor={3}/>
                 </ThreeScene>
             </div>
