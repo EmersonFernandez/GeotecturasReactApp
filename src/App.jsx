@@ -6,6 +6,7 @@ import Login from './pages/public/Login';
 import Footer from './components/Footer';
 import NavBAr from './components/Navbar';
 import Services from './pages/public/Services';
+import Models from './pages/public/Models';
 import './App.css'
 import './styles/stylemain.css'
 import Project from './pages/public/projects/Project';
@@ -26,6 +27,7 @@ function App() {
           <Route path='/' element={<Home/>}></Route>
           <Route path='/services' element={<Services/>}></Route>
           <Route path='/project' element={<Project/>}></Route>
+          <Route path='/models' element={<Models/>}></Route>
           <Route path="/dashboard" element={<ProtectedRoute element={DashBoards} />} />
           {/* <Route path='*' element={<Navigate to='/' replace />} /> */}
         </Routes>
