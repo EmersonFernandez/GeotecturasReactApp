@@ -24,14 +24,15 @@
 .profile p {
     font-size: 16px;
     color: #7e7d7d;
+    margin: 5px;
 }
 
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 70px;
+    padding: 30px;
     margin-bottom: 30px;
 }
 
@@ -65,4 +66,6 @@
 .project-card p {
     font-size: 14px;
     color: #666;
+    margin: 5px;
+    
 }

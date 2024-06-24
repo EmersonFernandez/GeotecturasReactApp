@@ -14,11 +14,11 @@ const Profile = () => {
     );
 };
 
-const ProjectCard = ({ title, description }) => {
+const ProjectCard = ({ title, description, img }) => {
     return (
         <div className="project-card">
             <div className="project-image">
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR9zvyQbFxTcvettJa9MRneoSBNpAoZboI4g&s' alt=""></img>
+                <img src={img} alt=""></img>
             </div>
             <h2>{title}</h2>
             <p>{description}</p>
@@ -28,12 +28,15 @@ const ProjectCard = ({ title, description }) => {
 
 const ProjectsGrid = () => {
     const projects = [
-        { title: 'Proyecto 1', description: 'Una aplicación web interactiva que permite a los usuarios explorar y descubrir nuevos productos.' },
-        { title: 'Proyecto 2', description: 'Un sitio web de comercio electrónico con un diseño moderno y funcionalidades avanzadas.' },
-        { title: 'Proyecto 3', description: 'Una aplicación móvil de seguimiento de actividad física con funciones de análisis de datos.' },
-        { title: 'Proyecto 4', description: 'Un sistema de gestión de contenido personalizado para una empresa de marketing digital.' },
-        { title: 'Proyecto 5', description: 'Una plataforma de colaboración en línea para equipos de diseño y desarrollo.' },
-        { title: 'Proyecto 6', description: 'Un sitio web de noticias con un diseño limpio y una experiencia de usuario intuitiva.' }
+        { title: 'Observatorio Geoespacial', description: 'Líder en la construcción, diseño y coordinación del Observatorio Inmobiliario.', img:'https://apigeotecturas.onrender.com/api/image/3' },
+        { title: 'Ordenamiento Agropecuario', description: 'Modelación del Plan de Ordenamiento Territorial Agropecuario.', img:'https://apigeotecturas.onrender.com/api/image/4' },
+        { title: 'Macroestrategias Turísticas', description: 'Formulación de un modelo de macroestrategias turísticas para Antioquia.', img:'https://apigeotecturas.onrender.com/api/image/5' },
+        { title: 'AIE Transversalidades', description: 'Apoyo en la Formulación de Áreas de Intervención Estratégica de Medellín.', img:'https://apigeotecturas.onrender.com/api/image/6' },
+        { title: 'Modelo de Desarrollo', description: 'Gemelo Digital de modelo de Alianza para el Desarrollo de Antioquia.', img:'https://apigeotecturas.onrender.com/api/image/7' },
+        { title: 'Plan Corregimental', description: 'Formulación de un instrumento de planificación en el suelo rural de Itagüí.', img:'https://apigeotecturas.onrender.com/api/image/8' },
+        { title: 'Ciudadela Agroindustrial', description: 'Modelo de ciudadelas Agroindustriales para Antioquia.', img:'https://apigeotecturas.onrender.com/api/image/9' },
+        { title: 'Plan de Movilidad Guatapé', description: 'Aplicación de herramientas de City Information Modeling -CIM.', img:'https://apigeotecturas.onrender.com/api/image/10' },
+        { title: 'Remodelación Estadio', description: 'Modelación de propesta urbana para la renovación del Estadio de Medellín.', img:'https://apigeotecturas.onrender.com/api/image/11' },
     ];
 
     return (
@@ -43,6 +46,7 @@ const ProjectsGrid = () => {
                     key={index}
                     title={project.title}
                     description={project.description}
+                    img={project.img}
                 />
             ))}
         </div>

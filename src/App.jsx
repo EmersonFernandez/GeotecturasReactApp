@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { PrimeReactProvider } from 'primereact/api';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/public/Home';
@@ -14,6 +14,9 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+      let startAPI = import.meta.env.VITE_URL_API;
+  },[]);
   return (
     <PrimeReactProvider>
       <BrowserRouter>
