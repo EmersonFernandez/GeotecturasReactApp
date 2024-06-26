@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
-import { useLoader,useThree } from '@react-three/fiber';
+import { useLoader, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const ModelsLoader = () => {
+const ModelsLoader = ({ url, position, isTerreno, scale }) => {
     const [model, setModel] = useState(null);
     const { scene, camera, gl } = useThree();
 
-    const fbx = useLoader(FBXLoader, `${import.meta.env.VITE_URL_API}/models/arquitectonico/2`);
+    const fbx = useLoader(FBXLoader, url);
 
     useEffect(() => {
         if (fbx) {
@@ -16,15 +16,17 @@ const ModelsLoader = () => {
 
 
 
-            // Manipulate the model
-            // fbx.children[2].children.forEach((el) => {
-            //     el.children[0].material.color = new THREE.Color(3, 3, 3);
-            // });
 
-            // fbx.children[1].children.forEach((el) => {
-            //     el.children[0].material.color = new THREE.Color(1.6, 1.6, 1.6);
-            // });
+            if (isTerreno) {
+                //  terreno
+                fbx.children[2].children.forEach((el) => {
+                    el.children[0].material.color = new THREE.Color(3, 3, 3);
+                });
 
+                fbx.children[1].children.forEach((el) => {
+                    el.children[0].material.color = new THREE.Color(1.6, 1.6, 1.6);
+                });
+            }
 
             setModel(fbx);
         }
@@ -35,7 +37,7 @@ const ModelsLoader = () => {
     }
 
     return (
-        <group scale={[0.9, 0.9, 0.1]} rotation={[-Math.PI / 2, 0, 0]} position={[-160, -166.5, 150]}>
+        <group scale={scale} rotation={[-Math.PI / 2, 0, 0]} position={position}>
             <primitive object={model} />
         </group>
     );
