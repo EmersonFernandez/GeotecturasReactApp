@@ -26,6 +26,14 @@ const ModelsLoader = ({ url, position, isTerreno, scale }) => {
                 fbx.children[1].children.forEach((el) => {
                     el.children[0].material.color = new THREE.Color(1.6, 1.6, 1.6);
                 });
+
+                fbx.traverse((child) => {
+                    if (child.isMesh) {
+                        const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+                        child.material = material;
+                    }
+                });
+                // fbx.children[2].children[0].children[0].material = <meshBasicMaterial color={0xffffff}/>  
             }
 
             setModel(fbx);
