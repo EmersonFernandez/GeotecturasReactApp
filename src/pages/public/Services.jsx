@@ -98,12 +98,12 @@ export default function Services() {
 
     const productTemplate = (product) => {
         return (
-            <div className="m-2 text-center _box_card">
+            <div className="m-2 text-center __box__card">
                 <img src={product.image} alt={product.name} className="shadow-2" />
-                <div className='info'>
+                <div className='__info'>
                     <h3 className="mb-1">{product.name}</h3>
                     <p className="mt-0 mb-3" style={{ fontSize: '0.8rem' }}>{product.description}</p>
-                    <a className="btn-detalle" onClick={(e) => handleClick(e, product.url)}>Ver más</a>
+                    <a className="__btnDetalle" onClick={(e) => handleClick(e, product.url)}>Ver más</a>
                 </div>
             </div>
         );
@@ -111,10 +111,10 @@ export default function Services() {
 
     return (
         <>
-            <div className='box-home'>
-                <div className='title-servicies'>
-                    <p className='h1'>NUESTROS SERVICIOS</p>
-                    <p className='h2 text-center'>Ecosistemas virtuales para la Transformación Digital</p>
+            <div className='__servicies'>
+                <div className='__titleServicies'>
+                    <p className='__h1'>NUESTROS SERVICIOS</p>
+                    <p className='__h2 text-center'>Ecosistemas virtuales para la Transformación Digital</p>
                 </div>
                 <div className="card mb-1 mt-1">
                     <Carousel value={products} numScroll={1} numVisible={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />

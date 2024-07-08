@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
-import {logout} from '../servicies/authService'
-import {capitalizeFirstLetter} from '../utils/function'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { logout } from '../servicies/authService'
+import { capitalizeFirstLetter } from '../utils/function'
 
 export default function ModalProfil({ setIsOpen, toggleModal, isPrivate, user }) {
-    let location = useLocation();
+    // Variables
     let navigate = useNavigate();
-
     let themeDark = 'lara-dark-blue/theme.css';
     let ThemeLight = 'lara-light-blue/theme.css';
 
@@ -37,6 +36,7 @@ export default function ModalProfil({ setIsOpen, toggleModal, isPrivate, user })
         themeElement.href = `${themeBasePath}/${selectedTheme}`;
     };
 
+    // Cambio de temas
     const toggleModalThemes = () => {
         setIsOpenThemes(!isOpenThemes);
     };
@@ -53,36 +53,34 @@ export default function ModalProfil({ setIsOpen, toggleModal, isPrivate, user })
         navigate('/login');
 
     }
-
-
     return (
         <>
-            <div className='modal-overlay' onClick={toggleModal}>
-                <div className='modal-box' onClick={(e) => e.stopPropagation()}>
-                    <div className='modal-content'>
+            <div className='__modal__perfil' onClick={toggleModal}>
+                <div className='__modal__box' onClick={(e) => e.stopPropagation()}>
+                    <div className='__modal__content'>
                         {
                             isPrivate && <>
-                                <div className='info-perfil'>
-                                    <p className='mb-1 name'>{`${capitalizeFirstLetter(user.nombre)} ${capitalizeFirstLetter(user.apellido)}`}</p>
-                                    <p className='email'>{user.vcorreo}</p>
+                                <div className='__info__perfil'>
+                                    <p className='mb-1 __name'>{`${capitalizeFirstLetter(user.nombre)} ${capitalizeFirstLetter(user.apellido)}`}</p>
+                                    <p className='__email'>{user.vcorreo}</p>
                                 </div>
-                                <div className='dividir'></div>
+                                <div className='__dividir'></div>
                             </>
                         }
                         {
-                            isPrivate && <div className='info-perfil _efect'>
+                            isPrivate && <div className='__info__perfil __efect'>
                                 <p><i className='pi pi-cog' style={{ marginRight: '10px' }}></i>Configurar Perfil</p>
                             </div>
                         }
                         {
-                            !isPrivate && <div className='info-perfil _efect' onClick={() => navigate('/login')}>
+                            !isPrivate && <div className='__info__perfil __efect' onClick={() => navigate('/login')}>
                                 <p><i className='pi pi-sign-in' style={{ marginRight: '10px' }}></i>Iniciar Sesión</p>
                             </div>
                         }
-                        <div className='info-perfil _efect _themes' onClick={toggleModalThemes}>
+                        <div className='__info__perfil __efect __themes' onClick={toggleModalThemes}>
                             <p><i className='pi pi-palette' style={{ marginRight: '10px' }}></i>Temas<i className='pi pi-angle-right _row' style={{ marginLeft: '90px' }}></i></p>
                             {isOpenThemes && (
-                                <div className='themes'>
+                                <div className='__themes__box'>
                                     <p onClick={() => toggleTheme(false)}>
                                         <span>Claro</span>
                                         {!dark && (<i className='pi pi-check' style={{ marginLeft: '10px', fontSize: '10px' }}></i>)}
@@ -100,7 +98,7 @@ export default function ModalProfil({ setIsOpen, toggleModal, isPrivate, user })
                         {
                             isPrivate && <>
                                 <div className='dividir'></div>
-                                <div className='info-perfil _efect' onClick={closeSession}>
+                                <div className='__info__perfil __efect' onClick={closeSession}>
                                     <p><i className='pi pi-sign-out' style={{ marginRight: '10px' }}></i>Cerrar Sesión</p>
                                 </div>
                             </>

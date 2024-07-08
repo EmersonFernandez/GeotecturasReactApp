@@ -37,19 +37,19 @@ export default function Login({ setIsLoggedIn }) {
     })
 
     return (
-        <div className="box-login">
+        <div className="__boxLogin">
             <Toast ref={toast} position="bottom-right" />
             <div className='fixed top-0 left-0 my-5 mx-5' onClick={() => navigate('/')}><i className='pi pi-arrow-left hover:text-primary'></i></div>
-            <div className="box">
-                <div className="container-login100">
-                    <div className="login-container">
+            <div className="__box">
+                <div className="__container__login100">
+                    <div className="__login__container">
                         <form onSubmit={handleLogin}>
-                            <Card className="login-card border-1 surface-border border-round">
-                                <div className="login-header">
-                                    <img src={logo} alt="Logo" className="login-logo" />
-                                    <div className='text-session'>
-                                        <p className='h1'>Bienvenido!</p>
-                                        <p className='p'>Iniciar sesión para continuar</p>
+                            <Card className="__loginCard border-1 surface-border border-round">
+                                <div className="__loginHeader">
+                                    <img src={logo} alt="Logo" className="__loginLogo" />
+                                    <div className='__texteSesion'>
+                                        <p className='__h1'>Bienvenido!</p>
+                                        <p className='__p'>Iniciar sesión para continuar</p>
                                     </div>
                                 </div>
                                 <div className="p-fluid">

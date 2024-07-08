@@ -124,7 +124,7 @@ export default function NavBAr() {
 
     return (
         location.pathname !== '/login' && rutaExist && (
-            <div className="navBar" >
+            <div className="__navBar" >
                 {/* NavBar */}
                 <Menubar model={items} start={start} end={end} style={{borderRadius:'0px'}}/>
                 {/* Modal */}

@@ -1,18 +1,19 @@
 import React from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
+import * as THREE from 'three'
 
 export default function ThreeScene({ children }) {
     return (
-        <Canvas>
-            <SceneContents />
+        <Canvas shadows
+            gl={{
+                antialias: true,
+                toneMapping: THREE.ReinhardToneMapping,
+                toneMappingExposure: 1.5
+            }}
+        >
             {children}
         </Canvas>
     );
 }
 
-function SceneContents() {
-    const { scene, camera, gl } = useThree();
-    console.log(scene); // Imprime la escena en la consola del navegador
 
-    return null; // No renderiza ningún elemento en sí mismo
-}

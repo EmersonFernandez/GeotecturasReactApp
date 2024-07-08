@@ -1,9 +1,10 @@
 import React, { Suspense, useRef, useState, useEffect } from 'react';
 import ThreeScene from '../../components/ThreeScene';
 import { Canvas, useFrame } from '@react-three/fiber';
-import Sphere from '../../components/Sphere';
-import { OrbitControls, Stars, PerspectiveCamera, useProgress, Html, Sky, PresentationControls, MeshReflectorMaterial, Stage } from '@react-three/drei';
+import { OrbitControls, Stars, PerspectiveCamera, useProgress, Html, Sky, PresentationControls, MeshReflectorMaterial, Stage, Environment } from '@react-three/drei';
 import ModelsLoader from '../../components/ModelsLoader';
+// import hdr from '../../assets/recursos/hdr/decor_shop_1k.hdr'
+import Tooltip from '../../components/Tooltip';
 
 export default function Models() {
     const cameraRef = useRef();
@@ -31,22 +32,16 @@ export default function Models() {
 
     useEffect(() => {
         if (cameraRef.current) {
-            cameraRef.current.rotation.set(-Math.PI / 2, -Math.PI / 2,-Math.PI / 2); // Adjust these values for desired initial rotation
+            cameraRef.current.rotation.set(-Math.PI / 2, -Math.PI / 2, -Math.PI / 2); // Adjust these values for desired initial rotation
         }
     }, []);
 
     return (
         <>
             <div style={{ height: '100vh' }}>
+                <Tooltip data={{ name: 'Nombres ya estan' }} />
                 <ThreeScene>
-                    {/* <PresentationControls
-                        speed={0.5}
-                    // global
-                    // polar={[-0.1, Math.PI / 4]}
-                    // rotation={[Math.PI /2 , 0 , 0]}
-                    >
- */}
-
+                    {/* <Environment files={hdr} /> */}
                     <color attach="background" args={['#161c24']} />
                     <PerspectiveCamera
                         ref={cameraRef}
@@ -57,53 +52,30 @@ export default function Models() {
                         makeDefault
                     />
                     <ambientLight intensity={2} />
-                    {/* <pointLight position={[10, 10, 10]} /> */}
+                    <directionalLight
+                        position={[10, 10, 10]}
+                        intensity={1}
+                        castShadow
+                    />
                     <Sky
-                        distance={450000} // Distance of the sky
-                        sunPosition={[5, 2, 8]} // Position of the sun
-                        inclination={4} // Sun inclination
-                        azimuth={2} // Sun azimuth
+                        distance={450000}
+                        sunPosition={[5, 2, 8]}
+                        inclination={4}
+                        azimuth={2}
                     />
 
                     <OrbitControls
                         enableZoom={true}
                         zoomSpeed={1.0}
-                        minDistance={0.001} // Adjusted min distance
-                        maxDistance={1000} // Adjusted max distance
+                        minDistance={0.001}
+                        maxDistance={1000}
                         enablePan={true}
-                    // target={[0, -100, 0]}
                     />
 
-                    {/* <Suspense fallback={<Loader />}>
-                        <ModelsLoader url={`${import.meta.env.VITE_URL_API}/models/arquitectonico/2`} position={[-160, -166.3, 150]} />
-                        <ModelsLoader url={`${import.meta.env.VITE_URL_API}/models/arquitectonico/4`} position={[-160, -166.3, 150]} />
-                        <ModelsLoader url={`${import.meta.env.VITE_URL_API}/models/arquitectonico/3`} position={[-160, -166.3, 150]} />
-                        <ModelsLoader url={`${import.meta.env.VITE_URL_API}/models/arquitectonico/1`} position={[-160, -166.5, 150]} />
-                    </Suspense>
- */}
-
                     <Stage environment="city" intensity={0.6} castShadow={false}>
-                        <ModelsLoader url={`${import.meta.env.VITE_URL_API}/models/arquitectonico/2`} position={[-160, -1710, 150]} scale={[1,1,1]} />
-                        <ModelsLoader url={`${import.meta.env.VITE_URL_API}/models/arquitectonico/4`} position={[-160, -1547, 150]} scale={[1,1,0.9]}/>
-                        <ModelsLoader url={`${import.meta.env.VITE_URL_API}/models/arquitectonico/3`} position={[-160, -1710, 150]} scale={[1,1,1]} />
-                        <ModelsLoader url={`${import.meta.env.VITE_URL_API}/models/arquitectonico/1`} position={[-160, -1712, 150]} isTerreno = {true}/>
+                        <ModelsLoader url={`${import.meta.env.VITE_URL_API}/models/arquitectonico/5`} position={[-160, -1710, 150]} scale={[1, 1, 1]} />
                     </Stage>
-                    {/* <mesh rotation={[-Math.PI / 2, 0, 0]} position-y={-2}>
-                            <planeGeometry args={[170, 170]} />
-                            <MeshReflectorMaterial
-                                blur={[300, 100]}
-                                resolution={2048}
-                                mixBlur={1}
-                                mixStrength={40}
-                                roughness={1}
-                                depthScale={1.2}
-                                minDepthThreshold={0.4}
-                                maxDepthThreshold={1.4}
-                                color="#101010"
-                                metalness={0.5}
-                            />
-                        </mesh> */}
-                    {/* </PresentationControls> */}
+
                 </ThreeScene>
             </div>
         </>

@@ -26,15 +26,15 @@ const Footer = () => {
 
     return (
         location.pathname != '/login' && rutaExist && (
-            <footer className="footer">
-                <div className='box'>  
+            <footer className="__footer">
+                <div>  
                     {/* Apartados */}
                     <div>
                         <div className='grid'>
                             {/* Nombre Pagina */}
                             <div className='col-12 md:col-4'>
-                                <div className='center-horizontal'>
-                                    <p className='title-footer'>Geotecturas</p>
+                                <div className='__center__horizontal'>
+                                    <p className='__title__footer'>Geotecturas</p>
                                     <img src={logo} alt="" style={{ width: '100px', height: 'auto' }} />
                                     {/* <p className='p-footer'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis quisquam officia numquam.!</p> */}
                                 </div>
@@ -42,25 +42,25 @@ const Footer = () => {
 
                             {/* Servicios */}
                             <div className='col-12 md:col-4'>
-                                <div className='center-horizontal'>
-                                    <p className='title-footer'>Servicios</p>
-                                    <ul className='ul-footer text-center'>
-                                        <li className='mb-1'><a className='mb-2 link-servicios'>Ecosistemas Digitales</a></li>
-                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital Smart City</a></li>
-                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital P.O.T.</a></li>
-                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital P.D.M.</a></li>
-                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital Macroproyectos</a></li>
-                                        <li className='mb-1'><a className='mb-2 link-servicios'>Gemelo Digital Inmobiliario</a></li>
+                                <div className='__center__horizontal'>
+                                    <p className='__title__footer'>Servicios</p>
+                                    <ul className='__ul__footer text-center'>
+                                        <li className='mb-1'><a className='mb-2 __link__servicios'>Ecosistemas Digitales</a></li>
+                                        <li className='mb-1'><a className='mb-2 __link__servicios'>Gemelo Digital Smart City</a></li>
+                                        <li className='mb-1'><a className='mb-2 __link__servicios'>Gemelo Digital P.O.T.</a></li>
+                                        <li className='mb-1'><a className='mb-2 __link__servicios'>Gemelo Digital P.D.M.</a></li>
+                                        <li className='mb-1'><a className='mb-2 __link__servicios'>Gemelo Digital Macroproyectos</a></li>
+                                        <li className='mb-1'><a className='mb-2 __link__servicios'>Gemelo Digital Inmobiliario</a></li>
                                     </ul>
                                 </div>
                             </div>
                             {/* Contactanos */}
                             <div className='col-12 md:col-4 '>
-                                <div className='center-horizontal'>
-                                    <p className='title-footer'>Contáctanos</p>
-                                    <ul className='ul-footer'>
-                                        <li className='mb-1'><a href={mailtoUrl} className='icon-dividir contactanos'><i className='pi pi-envelope'></i>gerencia@geotecturas.com</a></li>
-                                        <li className='mb-1'><a href={whatsappUrl} target='_blank' className='icon-dividir contactanos'><i className='pi pi-phone'></i>+57 321 6279691</a></li>
+                                <div className='__center__horizontal'>
+                                    <p className='__title__footer'>Contáctanos</p>
+                                    <ul className='__ul__footer'>
+                                        <li className='mb-1'><a href={mailtoUrl} className='__icon__dividir __contactanos'><i className='pi pi-envelope'></i>gerencia@geotecturas.com</a></li>
+                                        <li className='mb-1'><a href={whatsappUrl} target='_blank' className='__icon__dividir __contactanos'><i className='pi pi-phone'></i>+57 321 6279691</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -68,21 +68,22 @@ const Footer = () => {
                     </div>
 
                     {/* Divisor */}
-                    <div className='dividir-f'></div>
+                    <div className='__dividir__footer'></div>
                     <div className='flex justify-content-center align-content-center'>
                         <div className='flex flex-column justify-content-center align-content-center'>
                             <div className='text-center mb-2'>Todos los derechos reservados © 2024 Geotecturas SAS</div>
                             <div className='flex justify-content-center align-content-center gap-2'>
-                                <a href='https://www.facebook.com/Geotecturas/' className='icon-dividir' target="_blank" ><i className='pi pi-facebook'></i></a>
-                                <a href='https://www.instagram.com/geotecturas/' className='icon-dividir' target="_blank" ><i className='pi pi-instagram'></i></a>
-                                <a href='https://x.com/geotecturas' className='icon-dividir' target="_blank" ><i className='pi pi-twitter'></i></a>
-                                <a href='https://www.linkedin.com/in/geotecturas/' className='icon-dividir' target="_blank" ><i className='pi pi-linkedin'></i></a>
-                                <a href='https://www.youtube.com/channel/UCZVMtvoLKIHOviY61cmgCKQ' className='icon-dividir' target="_blank" ><i className='pi pi-youtube'></i></a>
+                                <a href='https://www.facebook.com/Geotecturas/' className='__icon__dividir' target="_blank" ><i className='pi pi-facebook'></i></a>
+                                <a href='https://www.instagram.com/geotecturas/' className='__icon__dividir' target="_blank" ><i className='pi pi-instagram'></i></a>
+                                <a href='https://x.com/geotecturas' className='__icon__dividir' target="_blank" ><i className='pi pi-twitter'></i></a>
+                                <a href='https://www.linkedin.com/in/geotecturas/' className='__icon__dividir' target="_blank" ><i className='pi pi-linkedin'></i></a>
+                                <a href='https://www.youtube.com/channel/UCZVMtvoLKIHOviY61cmgCKQ' className='__icon__dividir' target="_blank" ><i className='pi pi-youtube'></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
+
         )
     );
 }
