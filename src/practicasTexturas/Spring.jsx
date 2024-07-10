@@ -205,20 +205,10 @@ export default function SpringReact() {
     })
 
     const props2 = useSpring({
-        from: { opacity: 0, x: 1200 },
+        from: { opacity: 0, x: 1100 },
         to: [
             { opacity: 0.5, x: 500 },
             { opacity: 1, x: 0 },
-            // { opacity: 1, x: 5 },
-            // { opacity: 1, x: 0 },
-            // { opacity: 1, x: 4 },
-            // { opacity: 1, x: 0 },
-            // { opacity: 1, x: 3 },
-            // { opacity: 1, x: 0 },
-            // { opacity: 1, x: 2 },
-            // { opacity: 1, x: 0 },
-            // { opacity: 1, x: 1 },
-            // { opacity: 1, x: 0 },
         ],
         config: {
             duration: 500,
