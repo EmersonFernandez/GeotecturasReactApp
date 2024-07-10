@@ -251,7 +251,7 @@ export default function SpringReact() {
                 <div>
                     <div className='dising' >
                         <div className='gg'>
-                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5)}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5,props)}></animated.div>
                             <animated.div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3)}></animated.div >
                             <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1)}></animated.div>
                         </div>
