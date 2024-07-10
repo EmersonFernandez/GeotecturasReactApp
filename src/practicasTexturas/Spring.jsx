@@ -187,7 +187,7 @@ export default function SpringReact() {
                 { opacity: 1, x: 0 }
             ],
             config: {
-                duration: 300,
+                duration: 250,
             }
         }),
         []
@@ -200,7 +200,7 @@ export default function SpringReact() {
             { opacity: 1, x: 0 }
         ],
         config: {
-            duration: 400
+            duration: 350
         }
     })
 
@@ -211,7 +211,7 @@ export default function SpringReact() {
             { opacity: 1, x: 0 },
         ],
         config: {
-            duration: 500,
+            duration: 400,
         }
     })
 
