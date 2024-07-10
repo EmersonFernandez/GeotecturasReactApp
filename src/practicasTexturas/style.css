@@ -109,6 +109,8 @@ body::-webkit-scrollbar {
 /* Titulo */
 .dising {
     margin: 150px 0 0 80px;
+    overflow: hidden;
+    width: 100%;
 }
 
 .title {

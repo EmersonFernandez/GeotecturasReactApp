@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect } from 'react';
+import React, { useRef, useState, useLayoutEffect, useEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web'
 import logoGeo from '../assets/logoGeo.svg'
 import './style.css'
@@ -149,10 +149,34 @@ function Scene({ numStars = 200 }) {
     );
 }
 
-const AnimateBarCol = (col) => {
+const animateBarCol = (col,row) => {
     const numCol =  Number(`${col}00`);
+    const colRow = row ?  Number(`${row}0`) : 0 ;
     const x = 500 + numCol;
-    const d = 150 + nunCol; 
+    const d = 150 + numCol + colRow; 
+    console.log(' --> x ',x);
+    console.log(' --> d ',d);
+    const [props, api] = useSpring(
+        () => ({
+            from: { opacity: 0, x: x },
+            to: [
+                { opacity: 0.5, x: x / 2 },
+                { opacity: 1, x: 0 }
+            ],
+            config: {
+                duration: d
+            }
+        }),
+        []
+    );
+
+    return props;
+}
+
+const animateBarRow = (row) => {
+    const numRow =  Number(`${row}0`);
+    const x = 0 + numRow * 2;
+    const d = 0 + numRow * 2; 
     const [props, api] = useSpring(
         () => ({
             from: { opacity: 0, x: x },
@@ -232,31 +256,38 @@ export default function SpringReact() {
         }
     })
 
+    useEffect(() => {
+        // animateBarCol(1);
+        // animateBarCol(2);
+        // animateBarCol(3);
+    },[]);
+
 
 
     return (
         <>  
 
             <FramerMotion/>
-            <div className='container-home-main'>
+            <div className='container-home-main' style={{width:'100%'}}>
                 <div className='nav'>
                     <a onClick={() => null}><i className='pi pi-sign-in'></i>Inicar sesión</a>
                 </div>
                 {/* <div className='row'></div> */}
-                <div>
+                <div style={{width:'90%'}}>
                     <div className='dising' >
                         <div className='gg'>
-                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5,AnimateBarCol(1))}></animated.div>
-AnimateBarCol(1)                            <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1,AnimateBarCol(2))}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5,animateBarCol(1))}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3,animateBarCol(2))}></animated.div >
+                            <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1,animateBarCol(3))}></animated.div>
                         </div>
                         <div className='gg'>
-                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8,AnimateBarCol(3))}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8,animateBarCol(1,3))}></animated.div>
                         </div>
                         <div className='gg'>
-                            <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
-                            <div className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6)}></div>
+                            <animated.div  className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1,animateBarCol(1,6))}></animated.div >
+                            <animated.div  className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6,animateBarCol(2))}></animated.div >
                         </div>
-                        <animated.div className='title' style={AnimateBarCol(1)}>
+                        <animated.div className='title' style={props1}>
                             <h1>Geotectura</h1>
                             <h2>Tencnología para la gestión urbana</h2>
                         </animated.div>
