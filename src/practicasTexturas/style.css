@@ -181,6 +181,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     font-size: 0.8rem;
     cursor: pointer;
+    user-select: none;
 }
 
 .nav a:hover {
@@ -320,7 +321,7 @@ body::-webkit-scrollbar {
 
     .title h1 {
         font-size: 44px;
-        left: 7px;
+        left: 6px;
         top: -7px;
     }
 
