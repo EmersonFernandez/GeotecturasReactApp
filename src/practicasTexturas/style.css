@@ -130,9 +130,11 @@ body::-webkit-scrollbar {
     margin-bottom: 30px;
 }
 
+
+/* Footer */
 .footer {
     position: fixed;
-    right: 20px;
+    right: 35px;
     bottom: 20px;
     transform: rotate(-90deg) translateX(100%);
     transform-origin: bottom right;
@@ -161,6 +163,8 @@ body::-webkit-scrollbar {
     opacity: 0.5;
 }
 
+
+/* Inicio sesion */
 .nav {
     position: absolute;
     right: 50px;
@@ -187,6 +191,8 @@ body::-webkit-scrollbar {
     margin-right: 10px;
 }
 
+
+/* Modal Contactanos */
 .contactUs {
     position: fixed;
     bottom: 40px;
@@ -309,6 +315,18 @@ body::-webkit-scrollbar {
 
     .title h2 {
         font-size: 14px;
+    }
+
+    .footer {
+        right: 20px;
+    }
+
+    .nav{
+        right: 30px;
+    }
+
+    .contactUs{
+        right: 70px;
     }
     
 }
