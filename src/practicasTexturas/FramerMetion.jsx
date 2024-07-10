@@ -43,14 +43,14 @@ function Scene({ numStars = 200 }) {
         [0, 1],
         [0.001, degreesToRadians(180)]
     );
-    const distance = useTransform(scrollYProgress, [0, 1], [10, 3]);
+    const distance = useTransform(scrollYProgress, [0, 1], [0, 3]);
     const time = useTime();
 
     useFrame(({ camera }) => {
         camera.position.setFromSphericalCoords(
             distance.get() ,
             yAngle.get(),
-            time.get() * 0.0005
+            time.get() * 0.0001
         );
         camera.updateProjectionMatrix();
         camera.lookAt(0, 0, 0);

@@ -1,7 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useLayoutEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web'
 import logoGeo from '../assets/logoGeo.svg'
 import './style.css'
+import { useTransform, useScroll, useTime } from "framer-motion";
+import { degreesToRadians, progress, mix } from "popmotion";
+import { Canvas, useThree, useFrame } from "@react-three/fiber";
 
 // funcion para los symbol
 function symbol(numSymbol, props) {
@@ -22,7 +25,6 @@ function symbol(numSymbol, props) {
 
     const styles = {
         background: gradient[numSymbol - 1],
-        opacity: 1,
         transform: 'translate(0px, 0px)',
     }
 
@@ -37,10 +39,13 @@ const Logo = () => {
 // Componnete contacnamos
 const ContactUs = () => {
     const [springs, api] = useSpring(() => ({
-        from: { x: 40 },
-        to: { x: 0 },
+        from: {opacity: 0, x: 40 },
+        to: [
+            {opacity: 0.5, x: 20 },
+            {opacity: 1, x: 0 }
+        ],
         config: {
-            duration: 800
+            duration: 400
         }
     }))
 
@@ -71,33 +76,152 @@ const ContactUs = () => {
     </>
 }
 
+
+const AnimateBarCol = (col) => {
+    const [props, api] = useSpring(
+        () => ({
+            from: { opacity: 0, x: 800 },
+            to: [
+                { opacity: 0.5, x: 400 },
+                { opacity: 1, x: 0 }
+            ],
+            config: {
+                duration: 300
+            }
+        }),
+        []
+    );
+
+    return props;
+}
+
+
+const color = "#111111";
+
+const Icosahedron = () => (
+    <mesh rotation-x={0.35}>
+        <icosahedronGeometry args={[1, 0]} />
+        <meshBasicMaterial wireframe color={color} />
+    </mesh>
+);
+
+
+const Star = ({ p }) => {
+    const ref = useRef(null);
+
+    useLayoutEffect(() => {
+        const distance = mix(2, 3.5, Math.random());
+        const yAngle = mix(
+            degreesToRadians(80),
+            degreesToRadians(100),
+            Math.random()
+        );
+        const xAngle = degreesToRadians(360) * p;
+        ref.current.position.setFromSphericalCoords(distance, yAngle, xAngle);
+    }, [p]);
+
+    return (
+        <mesh ref={ref}>
+            <boxGeometry args={[0.05, 0.05, 0.05]} />
+            <meshBasicMaterial wireframe color={color} />
+        </mesh>
+    );
+};
+
+function Scene({ numStars = 200 }) {
+    const gl = useThree((state) => state.gl);
+    const { scrollYProgress } = useScroll();
+    const yAngle = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0.001, degreesToRadians(180)]
+    );
+    const distance = useTransform(scrollYProgress, [0, 1], [10, 3]);
+    const time = useTime();
+
+    useFrame(({ camera }) => {
+        camera.position.setFromSphericalCoords(
+            distance.get() ,
+            yAngle.get(),
+            time.get() * 0.0005
+        );
+        camera.updateProjectionMatrix();
+        camera.lookAt(0, 0, 0);
+    });
+
+    useLayoutEffect(() => {
+        gl.setPixelRatio(0.3);
+    }, [gl]);
+
+    const stars = [];
+    for (let i = 0; i < numStars; i++) {
+        stars.push(<Star key={i} p={progress(0, numStars, i)} />);
+    }
+
+    return (
+        <>
+            <Icosahedron />
+            {stars}
+        </>
+    );
+}
+
+function FramerMotion() {
+    return (
+        <div className="container-canvas">
+            <Canvas gl={{ antialias: false }}>
+                <Scene />
+            </Canvas>
+        </div>
+    );
+}
+
 export default function SpringReact() {
     const [openContactUs, setOpenContactUs] = useState(false);
 
     const [props, api] = useSpring(
         () => ({
-            from: { opacity: 0, x: 500 },
-            to: { opacity: 1, x: 0 },
+            from: { opacity: 0, x: 800 },
+            to: [
+                { opacity: 0.5, x: 400 },
+                { opacity: 1, x: 0 }
+            ],
             config: {
-                duration: 400
+                duration: 300,
             }
         }),
         []
     )
 
     const props1 = useSpring({
-        from: { opacity: 0, x: 40 },
-        to: { opacity: 1, x: 0 },
+        from: { opacity: 0, x: 1000 },
+        to: [
+            { opacity: 0.5, x: 450 },
+            { opacity: 1, x: 0 }
+        ],
         config: {
             duration: 400
         }
     })
 
     const props2 = useSpring({
-        from: { opacity: 0, x: 40 },
-        to: { opacity: 1, x: 0 },
+        from: { opacity: 0, x: 1200 },
+        to: [
+            { opacity: 0.5, x: 500 },
+            { opacity: 1, x: 0 },
+            // { opacity: 1, x: 5 },
+            // { opacity: 1, x: 0 },
+            // { opacity: 1, x: 4 },
+            // { opacity: 1, x: 0 },
+            // { opacity: 1, x: 3 },
+            // { opacity: 1, x: 0 },
+            // { opacity: 1, x: 2 },
+            // { opacity: 1, x: 0 },
+            // { opacity: 1, x: 1 },
+            // { opacity: 1, x: 0 },
+        ],
         config: {
-            duration: 1000
+            duration: 500,
         }
     })
 
@@ -116,7 +240,8 @@ export default function SpringReact() {
 
 
     return (
-        <>
+        <>  
+            <FramerMotion/>
             <div className='container-home-main'>
                 <div className='nav'>
                     <a onClick={() => null}><i className='pi pi-sign-in'></i>Inicar sesión</a>
@@ -124,7 +249,7 @@ export default function SpringReact() {
                 {/* <div className='row'></div> */}
                 <div>
                     <div className='dising' >
-                        {/* <div className='gg'>
+                        <div className='gg'>
                             <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5, props)}></animated.div>
                             <animated.div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3, props1)}></animated.div >
                             <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1, props2)}></animated.div>
@@ -135,7 +260,7 @@ export default function SpringReact() {
                         <div className='gg'>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6)}></div>
-                        </div> */}
+                        </div>
                         <animated.div className='title' style={props1}>
                             <h1>Geotectura</h1>
                             <h2>Tencnología para la gestión urbana</h2>
