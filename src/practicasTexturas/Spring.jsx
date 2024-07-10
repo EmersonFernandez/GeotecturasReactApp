@@ -77,23 +77,6 @@ const ContactUs = () => {
 }
 
 
-const AnimateBarCol = (col) => {
-    const [props, api] = useSpring(
-        () => ({
-            from: { opacity: 0, x: 800 },
-            to: [
-                { opacity: 0.5, x: 400 },
-                { opacity: 1, x: 0 }
-            ],
-            config: {
-                duration: 300
-            }
-        }),
-        []
-    );
-
-    return props;
-}
 
 
 const color = "#111111";
@@ -165,6 +148,28 @@ function Scene({ numStars = 200 }) {
         </>
     );
 }
+
+const AnimateBarCol = (col) => {
+    const numCol =  Number(`${col}00`);
+    const x = 500 + numCol;
+    const d = 150 + nunCol; 
+    const [props, api] = useSpring(
+        () => ({
+            from: { opacity: 0, x: x },
+            to: [
+                { opacity: 0.5, x: x / 2 },
+                { opacity: 1, x: 0 }
+            ],
+            config: {
+                duration: d
+            }
+        }),
+        []
+    );
+
+    return props;
+}
+
 
 function FramerMotion() {
     return (
@@ -241,18 +246,17 @@ export default function SpringReact() {
                 <div>
                     <div className='dising' >
                         <div className='gg'>
-                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5,props)}></animated.div>
-                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3,props1)}></animated.div >
-                            <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1,props2)}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5,AnimateBarCol(1))}></animated.div>
+AnimateBarCol(1)                            <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1,AnimateBarCol(2))}></animated.div>
                         </div>
                         <div className='gg'>
-                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8,props1)}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8,AnimateBarCol(3))}></animated.div>
                         </div>
                         <div className='gg'>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6)}></div>
                         </div>
-                        <animated.div className='title' style={props1}>
+                        <animated.div className='title' style={AnimateBarCol(1)}>
                             <h1>Geotectura</h1>
                             <h2>Tencnología para la gestión urbana</h2>
                         </animated.div>
