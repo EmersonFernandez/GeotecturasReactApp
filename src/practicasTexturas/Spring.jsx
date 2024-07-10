@@ -205,9 +205,9 @@ export default function SpringReact() {
     })
 
     const props2 = useSpring({
-        from: { opacity: 0, x: 1000 },
+        from: { opacity: 0, x: 900 },
         to: [
-            { opacity: 0.5, x: 500 },
+            { opacity: 0.5, x: 450 },
             { opacity: 1, x: 0 },
         ],
         config: {
