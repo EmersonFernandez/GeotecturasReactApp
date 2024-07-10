@@ -119,7 +119,7 @@ export default function SpringReact() {
         <>
             <div className='container-home-main'>
                 <div className='nav'>
-                    <a><i className='pi pi-sign-in'></i>Inicar sesión</a>
+                    <a onClick={() => null}><i className='pi pi-sign-in'></i>Inicar sesión</a>
                 </div>
                 {/* <div className='row'></div> */}
                 <div>

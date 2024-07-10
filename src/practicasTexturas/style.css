@@ -267,6 +267,17 @@ body::-webkit-scrollbar {
     font-size: 1.1rem;
 }
 
+a {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
 /* Pantallas pequeñas (móviles en orientación vertical, entre 400px y 600px) */
 @media only screen and (min-width: 300px) and (max-width: 400px) {
     body {
@@ -301,6 +312,15 @@ body::-webkit-scrollbar {
 
     .contactUs {
         right: 70px;
+    }
+
+    a {
+        outline: none;
+    }
+
+    a:focus {
+        outline: none;
+        box-shadow: none;
     }
 }
 
@@ -339,6 +359,15 @@ body::-webkit-scrollbar {
 
     .contactUs {
         right: 70px;
+    }
+
+    a {
+        outline: none;
+    }
+
+    a:focus {
+        outline: none;
+        box-shadow: none;
     }
 }
 
