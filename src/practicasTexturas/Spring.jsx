@@ -194,7 +194,7 @@ export default function SpringReact() {
     )
 
     const props1 = useSpring({
-        from: { opacity: 0, x: 1000 },
+        from: { opacity: 0, x: 900 },
         to: [
             { opacity: 0.5, x: 450 },
             { opacity: 1, x: 0 }
@@ -205,7 +205,7 @@ export default function SpringReact() {
     })
 
     const props2 = useSpring({
-        from: { opacity: 0, x: 1100 },
+        from: { opacity: 0, x: 1000 },
         to: [
             { opacity: 0.5, x: 500 },
             { opacity: 1, x: 0 },
@@ -243,7 +243,7 @@ export default function SpringReact() {
                         <div className='gg'>
                             <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5,props)}></animated.div>
                             <animated.div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3,props1)}></animated.div >
-                            <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1,props1)}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1,props2)}></animated.div>
                         </div>
                         <div className='gg'>
                             <animated.div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8,props1)}></animated.div>
