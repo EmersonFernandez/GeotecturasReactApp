@@ -256,7 +256,7 @@ export default function SpringReact() {
                             <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1,props1)}></animated.div>
                         </div> */}
                         <div className='gg'>
-                            <div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8)}></div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8,props1)}></animated.div>
                         </div>
                         <div className='gg'>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
