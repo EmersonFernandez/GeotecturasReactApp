@@ -1,28 +1,10 @@
 import React, { useRef, useState } from 'react';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import styles from './styles.module.css';
 import { useSpring, animated } from '@react-spring/web'
 import logoGeo from '../assets/logoGeo.svg'
-
-const Page = ({ offset, gradient, onClick }) => (
-    <>
-        <ParallaxLayer offset={offset} speed={0.2} onClick={onClick}>
-            <div className={styles.slopeBegin} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
-            <div className={`${styles.slopeEnd} ${styles[gradient]}`} />
-        </ParallaxLayer>
-
-        <ParallaxLayer className={`${styles.text} ${styles.number}`} offset={offset} speed={0.3}>
-            <span>0{offset + 1}</span>
-        </ParallaxLayer>
-    </>
-);
-
+import './style.css'
 
 // funcion para los symbol
-function symbol(numSymbol) {
+function symbol(numSymbol, props) {
 
     const gradient = [
         '#969696', // symbol 1
@@ -44,7 +26,7 @@ function symbol(numSymbol) {
         transform: 'translate(0px, 0px)',
     }
 
-    return styles;
+    return { ...props, ...styles };
 }
 
 // Componente logo
@@ -90,23 +72,39 @@ const ContactUs = () => {
 }
 
 export default function SpringReact() {
-    const parallax = useRef(null);
     const [openContactUs, setOpenContactUs] = useState(false);
 
     const [props, api] = useSpring(
         () => ({
-            from: { opacity: 0, x: 100 },
+            from: { opacity: 0, x: 500 },
             to: { opacity: 1, x: 0 },
             config: {
-                duration: 800
+                duration: 400
             }
         }),
         []
     )
 
+    const props1 = useSpring({
+        from: { opacity: 0, x: 40 },
+        to: { opacity: 1, x: 0 },
+        config: {
+            duration: 400
+        }
+    })
+
+    const props2 = useSpring({
+        from: { opacity: 0, x: 40 },
+        to: { opacity: 1, x: 0 },
+        config: {
+            duration: 1000
+        }
+    })
+
+
     const propsFooter = useSpring({
-        from: { opacity:0 ,color: 'blue' },
-        to: { opacity: 1,color: 'white'  },
+        from: { opacity: 0, color: 'blue' },
+        to: { opacity: 1, color: 'white' },
         config: {
             duration: 300,
             mass: 10,
@@ -115,54 +113,58 @@ export default function SpringReact() {
         }
     })
 
+
+
     return (
         <>
-            <div className='nav'>
-                <a><i className='pi pi-sign-in'></i>Inicar sesión</a>
-            </div>
-            {/* <div className='row'></div> */}
-            <div className='__sas'>
-                <div className='home'>
-                    {/* <div className='gg'>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5)}></div>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3)}></div>
-                        <div className="gg-symbol gg-symbol--disc" style={symbol(1)}></div>
-                    </div>
-                    <div className='gg'>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8)}></div>
-                    </div>
-                    <div className='gg'>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6)}></div>
-                    </div> */}
-                    <animated.div className='title' style={props}>
-                        <h1>Geotectura</h1>
-                        <h2>Tencnologia para la gestio urbana</h2>
-                    </animated.div>
-                    {/* <div className='gg'>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5)}></div>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3)}></div>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6)}></div>
-                    </div>
-                    <div className='gg'>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--9" style={symbol(9)}></div>
-                        <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
-                        <div className="gg-symbol gg-symbol--3" style={symbol(3)}></div>
-                    </div> */}
+            <div className='container-home-main'>
+                <div className='nav'>
+                    <a><i className='pi pi-sign-in'></i>Inicar sesión</a>
                 </div>
-            </div>
-            <animated.div class="footer" style={propsFooter}>
-                <ul>
-                    <li><a onClick={() => setOpenContactUs(!openContactUs)}>Contácnanos</a></li>
-                    {/* <li><a href="mailto:guillaume.gouessan@gmail.com">Correo</a></li> */}
-                    <li><a>Nosotros</a></li>
-                    <li><a>Servicios</a></li>
-                </ul>
-            </animated.div>
+                {/* <div className='row'></div> */}
+                <div>
+                    <div className='dising' >
+                        {/* <div className='gg'>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5, props)}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3, props1)}></animated.div >
+                            <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1, props2)}></animated.div>
+                        </div>
+                        <div className='gg'>
+                            <div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8)}></div>
+                        </div>
+                        <div className='gg'>
+                            <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
+                            <div className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6)}></div>
+                        </div> */}
+                        <animated.div className='title' style={props1}>
+                            <h1>Geotectura</h1>
+                            <h2>Tencnología para la gestión urbana</h2>
+                        </animated.div>
+                        {/* <div className='gg'>
+                            <div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5)}></div>
+                            <div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3)}></div>
+                            <div className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6)}></div>
+                        </div> */}
+                        {/* <div className='gg'>
+                            <div className="gg-symbol gg-symbol--rect gg-symbol--9" style={symbol(9)}></div>
+                            <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
+                            <div className="gg-symbol gg-symbol--3" style={symbol(3)}></div>
+                        </div> */}
+                    </div>
+                </div>
+                <animated.div className="footer" style={propsFooter}>
+                    <ul>
+                        <li><a onClick={() => setOpenContactUs(!openContactUs)}>Contácnanos</a></li>
+                        {/* <li><a href="mailto:guillaume.gouessan@gmail.com">Correo</a></li> */}
+                        <li><a>Nosotros</a></li>
+                        <li><a>Servicios</a></li>
+                    </ul>
+                </animated.div>
 
-            {
-                openContactUs && <ContactUs />
-            }
+                {
+                    openContactUs && <ContactUs />
+                }
+            </div>
         </>
     );
 }

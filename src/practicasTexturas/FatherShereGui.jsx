@@ -2,7 +2,6 @@ import React from 'react'
 import ShereGui from './ShereGui'
 import { Leva } from 'leva'
 import { Logo } from '@pmndrs/branding'
-import './style.css'
 
 
 function Overlay() {
