@@ -241,6 +241,7 @@ export default function SpringReact() {
 
     return (
         <>  
+
             <FramerMotion/>
             <div className='container-home-main'>
                 <div className='nav'>
@@ -250,9 +251,9 @@ export default function SpringReact() {
                 <div>
                     <div className='dising' >
                         <div className='gg'>
-                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5, props)}></animated.div>
-                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3, props1)}></animated.div >
-                            <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1, props2)}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5,props1)}></animated.div>
+                            <animated.div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3,props1)}></animated.div >
+                            <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1,props1)}></animated.div>
                         </div>
                         <div className='gg'>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8)}></div>
