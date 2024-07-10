@@ -254,28 +254,28 @@ export default function SpringReact() {
                             <animated.div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5,props1)}></animated.div>
                             <animated.div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3,props1)}></animated.div >
                             <animated.div className="gg-symbol gg-symbol--disc" style={symbol(1,props1)}></animated.div>
-                        </div>
+                        </div> */}
                         <div className='gg'>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--8" style={symbol(8)}></div>
                         </div>
                         <div className='gg'>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6)}></div>
-                        </div> */}
+                        </div>
                         <animated.div className='title' style={props1}>
                             <h1>Geotectura</h1>
                             <h2>Tencnología para la gestión urbana</h2>
                         </animated.div>
-                        <div className='gg'>
+                        {/* <div className='gg'>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--5" style={symbol(5)}></div>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--3" style={symbol(3)}></div>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--6" style={symbol(6)}></div>
-                        </div>
-                        <div className='gg'>
+                        </div> */}
+                        {/* <div className='gg'>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--9" style={symbol(9)}></div>
                             <div className="gg-symbol gg-symbol--rect gg-symbol--square" style={symbol(1)}></div>
                             <div className="gg-symbol gg-symbol--3" style={symbol(3)}></div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <animated.div className="footer" style={propsFooter}>
